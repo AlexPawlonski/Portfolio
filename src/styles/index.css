@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #242424;
+  color: white;
+  font-family: "JetBrains Mono", monospace;
+  font-weight: bold;
+}
+
+.boxShadows {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.boxShadowsLite {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.textShadowsBlue {
+  text-shadow: 0 0 2em #69DBFF
+}
