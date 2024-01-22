@@ -14,9 +14,10 @@ import { useState } from "react";
 
 interface Props {
   forceVertical?: boolean;
+  isFixed?: boolean;
 }
 
-export default function Nav({ forceVertical = false }: Props) {
+export default function Nav({ forceVertical = false, isFixed = false }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -36,34 +37,35 @@ export default function Nav({ forceVertical = false }: Props) {
         <>
           <ul
             className={classNames(
-              forceVertical ? "flex-col lg:flex-row" : "lg:flex-col",
-              "flex items-center gap-4"
+              forceVertical || isFixed ? "flex-col lg:flex-row" : "lg:flex-col gap-4",
+              "flex items-center",
+              isFixed && "lg:w-full max-w-full flex-wrap justify-center"
             )}
           >
             <NavItem
               id={"home"}
-              onClick={(id) => console.log(id)}
               icon={<FontAwesomeIcon icon={faHome} />}
+              className={classNames(isFixed && "transform scale-75")}
             />
             <NavItem
               id={"projects"}
-              onClick={(id) => console.log(id)}
               icon={<FontAwesomeIcon icon={faDisplay} />}
+              className={classNames(isFixed && "transform scale-75")}
             />
             <NavItem
               id={"work"}
-              onClick={(id) => console.log(id)}
               icon={<FontAwesomeIcon icon={faBriefcase} />}
+              className={classNames(isFixed && "transform scale-75")}
             />
             <NavItem
               id={"scool"}
-              onClick={(id) => console.log(id)}
               icon={<FontAwesomeIcon icon={faSchool} />}
+              className={classNames(isFixed && "transform scale-75")}
             />
             <NavItem
               id={"contact"}
-              onClick={(id) => console.log(id)}
               icon={<FontAwesomeIcon icon={faPaperPlane} />}
+              className={classNames(isFixed && "transform scale-75")}
             />
           </ul>
           <p className="text-center lg:text-xl">{`</nav>`}</p>

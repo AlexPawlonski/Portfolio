@@ -1,14 +1,19 @@
+import { classNames } from "@src/utils";
+
 interface Props {
   id: string;
-  onClick: (id: string) => void;
   icon: JSX.Element;
+  className?: string;
 }
 
-export default function ProfilImg({ id, onClick, icon }: Props) {
+export default function ProfilImg({ id, icon, className }: Props) {
   return (
     <a
       href={`#${id}`}
-      className="bg-grey-light rounded-xl py-3 px-4 text-2xl boxShadowsLite cursor-pointer transform transition-all hover:scale-110"
+      className={classNames(
+        "bg-grey-light rounded-xl py-3 px-4 text-2xl boxShadowsLite cursor-pointer transform transition-all hover:scale-110",
+        className
+      )}
     >
       {icon}
     </a>
