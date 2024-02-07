@@ -23,3 +23,8 @@ body {
 .textShadowsBlue {
   text-shadow: 0 0 2em #69dbff;
 }
+
+
+.imgHeight {
+  max-height: calc(100vh - 300px);
+}

@@ -7,13 +7,15 @@ interface Props {
 
 export default function Layout({ children }: Props) {
   return (
-    <html>
-      <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="" />
+    <html lang="fr">
+      <head>
         <title>AlexPawlonski</title>
-      </Head>
+        <meta
+          name="description"
+          content="Portfolio Alex pawlonski développeur spécialisé React JS"
+        />
+        <link rel="icon" href="/icon.png" sizes="any" />
+      </head>
       <body className="p-5">{children}</body>
     </html>
   );

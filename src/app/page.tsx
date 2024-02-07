@@ -18,10 +18,10 @@ export default function Home() {
   return (
     <main id="home">
       <p className="lg:text-xl text-end">{`</body>`}</p>
-      <section className="flex flex-col gap-4 lg:gap-0 items-center lg:justify-center lg:flex-row-reverse lg:mt-20">
+      <section className="flex flex-col gap-4 lg:gap-0 items-center lg:justify-center lg:flex-row-reverse lg:h-[50vh]">
         <div className="flex flex-col items-center gap-4 lg:gap-20 lg:mx-20 xl:mx-24">
-          <div className="flex flex-col items-center gap-4 lg:flex-row lg:gap-24 ">
-            <ProfilImg size="lg:w-52 w-32" />
+          <div className="flex flex-col items-center gap-4 lg:flex-row lg:gap-24">
+            <ProfilImg size=" xl:w-80 lg:w-52 w-32" />
             <Header />
           </div>
           <h2 className="text-xl my-2 lg:text-4xl">“Work in progress ...”</h2>
@@ -31,7 +31,6 @@ export default function Home() {
       <span ref={myRef} id="scrollPoint"></span>
       {!headerVisible && <MenuFixed />}
       <div className="lg:mx-[200px] xl:mx-[350px] mt-10">
-        <Projects />
         <Projects />
       </div>
     </main>

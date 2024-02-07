@@ -30,14 +30,14 @@ export default function Nav({ forceVertical = false, isFixed = false }: Props) {
           )}
           onClick={() => setIsOpen((old) => !old)}
         >
-          <FontAwesomeIcon icon={faChevronDown} className="text-xl mt-2" />
+          <FontAwesomeIcon icon={faChevronDown} className="text-xl" />
         </div>
       )}
       {(!forceVertical || isOpen) && (
         <>
           <ul
             className={classNames(
-              forceVertical || isFixed ? "flex-col lg:flex-row" : "lg:flex-col gap-4",
+              forceVertical || isFixed ? "flex-col lg:flex-row lx:gap-2" : "lg:flex-col gap-4",
               "flex items-center",
               isFixed && "lg:w-full max-w-full flex-wrap justify-center"
             )}
