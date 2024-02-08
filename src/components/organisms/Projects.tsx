@@ -12,7 +12,7 @@ export default function Projects() {
       id="projects"
       className="flex flex-col gap-4 lg:h-[1250px] h-[800px]"
     >
-      <h2 className="text-2xl xl:text-5xl mt-4">Réalisation</h2>
+      <h2 className="text-2xl xl:text-5xl">Réalisation</h2>
       <ProjectNav
         onClickBack={() => {
           if (imgSelected) {
@@ -26,7 +26,7 @@ export default function Projects() {
         imgSelected={imgSelected}
       />
       {!projectSelected && (
-        <div className="grid grid-cols-2 lg:flex lg:flex-wrap">
+        <div className="grid grid-cols-2 lg:flex lg:flex-wrap gap-x-20">
           {projects.map((project, key) => (
             <ProjectItem
               key={key}

@@ -1,7 +1,9 @@
 "use client";
 import { Header, Nav, MenuFixed, Projects } from "@components/organisms";
-import { ProfilImg } from "@src/components/atoms";
-import { useEffect, useRef, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { ProfilImg, Writer } from "@src/components/atoms";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   const myRef: any = useRef();
@@ -15,23 +17,65 @@ export default function Home() {
     observer.observe(myRef.current);
   }, []);
 
+  const [screenWidthSize, setScreenSize] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1280
+  );
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const handleResize = () => {
+        setScreenSize(window.innerWidth);
+      };
+      window.addEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
+    }
+  }, []);
+
+  const pcPoint = useMemo(() => {
+    return { 1024: screenWidthSize > 1024, 1280: screenWidthSize > 1280 };
+  }, [screenWidthSize]);
+
   return (
     <main id="home">
-      <p className="lg:text-xl text-end">{`</body>`}</p>
-      <section className="flex flex-col gap-4 lg:gap-0 items-center lg:justify-center lg:flex-row-reverse lg:h-[50vh]">
+      <p className="absolute right-10 top-5 text-2xl">{`</body>`}</p>
+      <section className="flex flex-col gap-4 lg:gap-0 items-center justify-center lg:flex-row-reverse h-screen relative">
         <div className="flex flex-col items-center gap-4 lg:gap-20 lg:mx-20 xl:mx-24">
           <div className="flex flex-col items-center gap-4 lg:flex-row lg:gap-24">
             <ProfilImg size=" xl:w-80 lg:w-52 w-32" />
             <Header />
           </div>
-          <h2 className="text-xl my-2 lg:text-4xl">“Work in progress ...”</h2>
+          <Writer
+            phrases={[
+              "Hi!",
+              "Bienvenue sur mon PortFolio :D",
+              "Work in progress...",
+            ]}
+          />
         </div>
         <Nav />
+        <a
+          href={`#projects`}
+          className="bg-white lg:h-20 lg:w-20 w-14 h-14 rounded-full absolute bottom-5 lg:bottom-20 mx-auto flex items-center justify-center hover:scale-110 transform transition-all cursor-pointer"
+        >
+          <FontAwesomeIcon
+            icon={faArrowDown}
+            className="text-grey-dark lg:text-4xl text-2xl animate-bounce mt-2 lg:mt-3"
+          />
+        </a>
+        <span ref={myRef} id="scrollPoint"></span>
       </section>
-      <span ref={myRef} id="scrollPoint"></span>
-      {!headerVisible && <MenuFixed />}
-      <div className="lg:mx-[200px] xl:mx-[350px] mt-10">
-        <Projects />
+      <div className="flex w-full lg:gap-20 lg:mt-10">
+        {!headerVisible && !pcPoint[1024] && <MenuFixed />}
+        {pcPoint[1024] && (
+          <div className="xl:w-[25%] lg:w-[30%]">
+            <MenuFixed />
+          </div>
+        )}
+        <div className="w-full">
+          <Projects />
+        </div>
       </div>
     </main>
   );

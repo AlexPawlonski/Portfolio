@@ -2,7 +2,7 @@ import { Picture, Project } from "@src/interfaces";
 import { ButtonLink, ImgItem } from "../atoms";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
+import { faLink, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 
 interface Props {
@@ -50,7 +50,7 @@ export default function ProjectComponent({
               href={project.link.site}
             />
           </div>
-          <div className="flex flex-col gap-3 lg:text-lg xl:text-xl">
+          <div className="flex flex-col gap-3 lg:text-lg xl:text-xl w-[80%]">
             {project.description.map((text, key) => (
               <p key={key}>{text}</p>
             ))}

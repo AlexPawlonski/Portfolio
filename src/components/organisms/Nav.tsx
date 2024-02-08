@@ -37,35 +37,26 @@ export default function Nav({ forceVertical = false, isFixed = false }: Props) {
         <>
           <ul
             className={classNames(
-              forceVertical || isFixed ? "flex-col lg:flex-row lx:gap-2" : "lg:flex-col gap-4",
+              forceVertical || isFixed
+                ? "flex-col lg:flex-row lx:gap-0 gap-2"
+                : "lg:flex-col gap-4",
               "flex items-center",
-              isFixed && "lg:w-full max-w-full flex-wrap justify-center"
+              isFixed && "lg:w-full max-w-full flex-wrap justify-center gap-4"
             )}
           >
-            <NavItem
-              id={"home"}
-              icon={<FontAwesomeIcon icon={faHome} />}
-              className={classNames(isFixed && "transform scale-75")}
-            />
+            <NavItem id={"home"} icon={<FontAwesomeIcon icon={faHome} />} />
             <NavItem
               id={"projects"}
               icon={<FontAwesomeIcon icon={faDisplay} />}
-              className={classNames(isFixed && "transform scale-75")}
             />
             <NavItem
               id={"work"}
               icon={<FontAwesomeIcon icon={faBriefcase} />}
-              className={classNames(isFixed && "transform scale-75")}
             />
-            <NavItem
-              id={"scool"}
-              icon={<FontAwesomeIcon icon={faSchool} />}
-              className={classNames(isFixed && "transform scale-75")}
-            />
+            <NavItem id={"scool"} icon={<FontAwesomeIcon icon={faSchool} />} />
             <NavItem
               id={"contact"}
               icon={<FontAwesomeIcon icon={faPaperPlane} />}
-              className={classNames(isFixed && "transform scale-75")}
             />
           </ul>
           <p className="text-center lg:text-xl">{`</nav>`}</p>

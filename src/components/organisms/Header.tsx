@@ -7,8 +7,12 @@ interface Props {
 export default function Header({ isFixed }: Props) {
   return (
     <header className="bg-grey-light rounded-xl w-full p-4 testBoxShadows">
-      <p className="text-end lg:text-xl">{`</header>`}</p>
-      {isFixed && <ProfilImg size="w-52 lg:w-32 mx-auto my-4" showText={false} />}
+      <p className="text-end lg:text-xl">
+        {!isFixed ? `</header>` : `</memo>`}
+      </p>
+      {isFixed && (
+        <ProfilImg size="w-52 lg:w-32 xl:w-52 mx-auto my-4" showText={false} />
+      )}
       <div
         className={
           isFixed
@@ -26,7 +30,9 @@ export default function Header({ isFixed }: Props) {
         </h1>
         <h2
           className={classNames(
-            isFixed ? "xl:text-xl lg:text-sm my-2" : "text-xl my-2 lg:my-4 lg:text-2xl"
+            isFixed
+              ? "xl:text-xl lg:text-sm my-2"
+              : "text-xl my-2 lg:my-4 lg:text-2xl"
           )}
         >
           Développeur Full-Stack

@@ -16,7 +16,7 @@ export default function Layout({ children }: Props) {
         />
         <link rel="icon" href="/icon.png" sizes="any" />
       </head>
-      <body className="p-5">{children}</body>
+      <body className="px-5 lg:px-8 xl:px-10 2xl:max-w-[80%] xl:max-w-full mx-auto">{children}</body>
     </html>
   );
 }

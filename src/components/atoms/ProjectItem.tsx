@@ -16,7 +16,7 @@ export default function ProjectItem({ project, onClick }: Props) {
         alt={`${project.name}-Icon`}
         width={512}
         height={512}
-        className="p-5 group-hover:scale-105 transition-all transform "
+        className="py-5 group-hover:scale-105 transition-all transform "
       />
       {/* add glow effect on hover pc */}
       <h2 className="text-center text-xl">{project.title}</h2>
