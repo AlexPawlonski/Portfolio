@@ -6,8 +6,8 @@ interface Props {
 }
 export default function Header({ isFixed }: Props) {
   return (
-    <header className="bg-grey-light rounded-xl w-full p-4 testBoxShadows">
-      <p className="text-end lg:text-xl">
+    <header className="rounded-xl w-full p-4 rainbowGlow boxShadowRainbow">
+      <p className="text-end lg:text-xl text-white">
         {!isFixed ? `</header>` : `</memo>`}
       </p>
       {isFixed && (
@@ -16,7 +16,7 @@ export default function Header({ isFixed }: Props) {
       <div
         className={
           isFixed
-            ? "flex flex-col gap-4"
+            ? "flex flex-col gap-2 m-2 xl:m-4 2xl:m-6"
             : "text-center lg:text-start m-2 lg:m-6"
         }
       >
@@ -39,7 +39,7 @@ export default function Header({ isFixed }: Props) {
         </h2>
         <h3
           className={classNames(
-            isFixed ? "flex flex-col gap-3" : "lg:text-2xl flex gap-2"
+            isFixed ? "flex flex-col gap-2" : "lg:text-2xl flex gap-2 text-xs"
           )}
         >
           <p>{"<Node JS />"}</p>

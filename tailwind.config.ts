@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     colors: {
       blueReact: "#69DBFF",
-      white: "#D9D9D9",
+      drakBlue: "#151823",
+      white: "#FFF",
       grey: {
         dark: "#242424",
         light: "#363636",

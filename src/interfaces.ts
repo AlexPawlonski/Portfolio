@@ -9,7 +9,7 @@ export interface Project {
   picture: Picture[];
   skills: string[];
   link: {
-    git: string;
+    git?: string;
     site: string;
   };
 }

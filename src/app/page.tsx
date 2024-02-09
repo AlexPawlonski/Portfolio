@@ -38,7 +38,7 @@ export default function Home() {
   }, [screenWidthSize]);
 
   return (
-    <main id="home">
+    <main id="home" className="z-10 relative">
       <p className="absolute right-10 top-5 text-2xl">{`</body>`}</p>
       <section className="flex flex-col gap-4 lg:gap-0 items-center justify-center lg:flex-row-reverse h-screen relative">
         <div className="flex flex-col items-center gap-4 lg:gap-20 lg:mx-20 xl:mx-24">
@@ -55,15 +55,18 @@ export default function Home() {
           />
         </div>
         <Nav />
-        <a
-          href={`#projects`}
-          className="bg-white lg:h-20 lg:w-20 w-14 h-14 rounded-full absolute bottom-5 lg:bottom-20 mx-auto flex items-center justify-center hover:scale-110 transform transition-all cursor-pointer"
-        >
-          <FontAwesomeIcon
-            icon={faArrowDown}
-            className="text-grey-dark lg:text-4xl text-2xl animate-bounce mt-2 lg:mt-3"
-          />
-        </a>
+        <div className="absolute bottom-5 lg:bottom-20 mx-auto group">
+          <a
+            href={`#projects`}
+            className="bg-white lg:h-20 lg:w-20 w-14 h-14 rounded-full flex items-center justify-center group-hover:scale-110 transform transition-all cursor-pointer relative z-20"
+          >
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="text-grey-dark lg:text-4xl text-2xl animate-bounce mt-2 lg:mt-3"
+            />
+          </a>
+          <div className="group-hover:opacity-100 transition-all opacity-0 imgGradient absolute top-1 left-1 z-10 w-24 h-24"></div>
+        </div>
         <span ref={myRef} id="scrollPoint"></span>
       </section>
       <div className="flex w-full lg:gap-20 lg:mt-10">

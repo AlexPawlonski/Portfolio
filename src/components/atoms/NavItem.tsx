@@ -6,12 +6,12 @@ interface Props {
   className?: string;
 }
 
-export default function ProfilImg({ id, icon, className }: Props) {
+export default function NavItem({ id, icon, className }: Props) {
   return (
     <a
       href={`#${id}`}
       className={classNames(
-        "bg-grey-light rounded-xl py-3 px-4 text-2xl boxShadowsLite cursor-pointer transform transition-all hover:scale-110",
+        "rounded-xl py-3 px-4 text-2xl boxShadowsLite cursor-pointer transform transition-all hover:scale-110 relative rainbowGlow boxShadowRainbowHover z-20",
         className
       )}
     >
