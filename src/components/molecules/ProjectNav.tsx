@@ -36,8 +36,8 @@ export default function ProjectNav({
   }, [projectSelected, imgSelected]);
 
   return (
-    <div className="bg-grey-light px-4 py-2 rounded-lg flex items-center gap-4 lg:my-8 lg:gap-6 xl:gap-7">
-      <div className="flex items-center gap-4 lg:gap-6 xl:gap-7 text-white">
+    <div className="bg-drakBlue bg-opacity-40 px-4 py-2 rounded-lg flex items-center gap-4 lg:my-8 lg:gap-6 xl:gap-7">
+      <div className="flex items-center gap-4 lg:gap-6 xl:gap-7">
         <FontAwesomeIcon
           icon={faArrowLeft}
           className={classNames(

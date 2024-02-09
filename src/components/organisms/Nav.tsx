@@ -21,11 +21,11 @@ export default function Nav({ forceVertical = false, isFixed = false }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex items-center flex-col gap-4">
+    <nav className="flex items-center flex-col gap-4 lg:mb-36">
       {forceVertical && (
         <div
           className={classNames(
-            "transform transition-all",
+            "transform transition-all bg-drakBlue rounded-full h-8 w-8 flex items-center justify-center ",
             isOpen && "rotate-180"
           )}
           onClick={() => setIsOpen((old) => !old)}
