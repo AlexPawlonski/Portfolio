@@ -1,16 +1,21 @@
+import { classNames } from "@src/utils";
+
 interface Props {
   id: string;
-  onClick: (id: string) => void;
   icon: JSX.Element;
+  className?: string;
 }
 
-export default function ProfilImg({ id, onClick, icon }: Props) {
+export default function NavItem({ id, icon, className }: Props) {
   return (
-    <li
-      className="bg-grey-light rounded-xl py-3 px-4 text-2xl boxShadowsLite cursor-pointer transform transition-all hover:scale-110"
-      onClick={() => onClick(id)}
+    <a
+      href={`#${id}`}
+      className={classNames(
+        "rounded-xl py-3 px-4 text-2xl boxShadowsLite cursor-pointer transform transition-all hover:scale-110 relative rainbowGlow boxShadowRainbowHover z-20",
+        className
+      )}
     >
       {icon}
-    </li>
+    </a>
   );
 }

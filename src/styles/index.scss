@@ -1,0 +1,80 @@
+@mixin backlight($x, $y, $spread, $size, $colorA, $colorB, $duration) {
+  &:after {
+    position: absolute;
+    content: "";
+    top: $y;
+    left: $x;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale($size);
+    -webkit-filter: blur($spread);
+    -moz-filter: blur($spread);
+    -ms-filter: blur($spread);
+    filter: blur($spread);
+    background: linear-gradient(270deg, $colorA, $colorB);
+    background-size: 200% 200%;
+    animation: animateGlow $duration ease infinite;
+
+    @keyframes animateGlow {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  }
+}
+
+.rainbowGlow {
+  position: relative;
+  color: #252b37;
+  background-color: #151823;
+  animation: textColor 10s ease infinite;
+  @keyframes textColor {
+    0% {
+      color: #b530ff;
+    }
+    50% {
+      color: #0fffc1;
+    }
+    100% {
+      color: #b530ff;
+    }
+  }
+}
+
+.boxShadowRainbow {
+  @include backlight(0, 5vw, 10vw, 0.75, #0fffc1, #b530ff, 10s);
+}
+.boxShadowRainbowHover:hover {
+  @include backlight(0, 0vw, 1vw, 0.8, #0fffc1, #b530ff, 10s);
+  color: azure;
+  animation: none;
+  transition: all;
+}
+.boxShadowHover:hover {
+  @include backlight(0, 2, 5vw, 0.5, #0fffc1, #b530ff, 1s);
+}
+
+.textAnnimColor {
+  color: #151823;
+  animation: textColor 10s ease infinite;
+  @keyframes textColor {
+    0% {
+      color: #b530ff;
+    }
+    50% {
+      color: #0fffc1;
+    }
+    100% {
+      color: #b530ff;
+    }
+  }
+}
