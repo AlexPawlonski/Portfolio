@@ -43,7 +43,7 @@ export default function Header({ isFixed }: Props) {
           )}
         >
           <p>{"<Node JS />"}</p>
-          <p>{"<React JS/>"}</p>
+          <p>{"<React JS />"}</p>
           <p>{"<TypeScript />"}</p>
         </h3>
       </div>

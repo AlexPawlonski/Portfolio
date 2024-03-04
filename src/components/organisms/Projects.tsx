@@ -10,7 +10,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col gap-4 lg:h-[1250px] h-[800px]"
+      className="flex flex-col gap-2 lg:h-[1000px] h-[800px]"
     >
       <h2 className="text-2xl xl:text-5xl">Réalisation</h2>
       <ProjectNav
@@ -26,7 +26,7 @@ export default function Projects() {
         imgSelected={imgSelected}
       />
       {!projectSelected && (
-        <div className="grid grid-cols-2 lg:flex lg:flex-wrap gap-x-20">
+        <div className="grid grid-cols-2 lg:flex lg:flex-wrap gap-x-14">
           {projects.map((project, key) => (
             <ProjectItem
               key={key}

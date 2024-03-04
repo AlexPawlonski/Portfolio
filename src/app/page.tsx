@@ -69,14 +69,14 @@ export default function Home() {
         </div>
         <span ref={myRef} id="scrollPoint"></span>
       </section>
-      <div className="flex w-full lg:gap-20 lg:mt-10">
+      <div className="flex w-full lg:gap-14 lg:mt-10">
         {!headerVisible && !pcPoint[1024] && <MenuFixed />}
         {pcPoint[1024] && (
           <div className="xl:w-[25%] lg:w-[30%]">
             <MenuFixed />
           </div>
         )}
-        <div className="w-full">
+        <div className="w-full mt-4">
           <Projects />
         </div>
       </div>

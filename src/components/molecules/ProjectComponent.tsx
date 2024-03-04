@@ -35,7 +35,7 @@ export default function ProjectComponent({
     );
   } else {
     return (
-      <article className="bg-drakBlue bg-opacity-40 rounded-xl p-4 lg:p-10 h-[100%] lg:h-[80%] grid lg:grid-cols-2 lg:grid-rows-10 grid-rows-12">
+      <article className="bg-drakBlue bg-opacity-40 rounded-xl p-4 lg:p-10 lg:h-[80%] h-[85%] grid lg:grid-cols-2 lg:grid-rows-10 grid-rows-12">
         <div className="flex flex-col lg:flex-row lg:justify-between justify-around col-span-2 lg:row-span-1 row-span-2 text-blueReact">
           <h2 className="text-3xl xl:text-5xl lg:text-3xl">{`<${project.name}/>`}</h2>
           <div className="flex items-start gap-6">
