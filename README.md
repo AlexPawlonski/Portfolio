@@ -1,8 +1,6 @@
 Welcome to the repository of my portfolio website, [alexpawlonski.tech](https://alexpawlonski.tech/)
 
-Sure, here's the translation of the text into English:
-
-"Welcome to the repository of my portfolio website, alexpawlonski.tech.
+Welcome to the repository of my portfolio website, alexpawlonski.tech.
 
 The code of the website is public, and I invite you to take a look if you ever wish to work with me, so you can see how I work.
 
