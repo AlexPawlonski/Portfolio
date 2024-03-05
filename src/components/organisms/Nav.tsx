@@ -50,7 +50,7 @@ export default function Nav({ forceVertical = false, isFixed = false }: Props) {
               icon={<FontAwesomeIcon icon={faDisplay} />}
             />
             <NavItem
-              id={"work"}
+              id={"skills"}
               icon={<FontAwesomeIcon icon={faBriefcase} />}
             />
             <NavItem id={"scool"} icon={<FontAwesomeIcon icon={faSchool} />} />

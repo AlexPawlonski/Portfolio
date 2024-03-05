@@ -1,5 +1,11 @@
 "use client";
-import { Header, Nav, MenuFixed, Projects } from "@components/organisms";
+import {
+  Header,
+  Nav,
+  MenuFixed,
+  Projects,
+  Skills,
+} from "@components/organisms";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ProfilImg, Writer } from "@src/components/atoms";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -78,6 +84,7 @@ export default function Home() {
         )}
         <div className="w-full mt-4">
           <Projects />
+          <Skills />
         </div>
       </div>
     </main>
