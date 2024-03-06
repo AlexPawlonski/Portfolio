@@ -20,7 +20,7 @@ import {
   ticketdetail,
 } from "@public/img/neoserver";
 
-import { Project } from "./interfaces";
+import { Project, ISkills } from "./interfaces";
 import {
   chatNeohelper,
   homeNeohelper,
@@ -221,34 +221,40 @@ export const projects: Project[] = [
       site: "https://www.linkedin.com/company/neomanis/",
     },
   },
-  // {
-  //   id: 3,
-  //   name: "CodingWeb BluEx",
-  //   description: [
-  //     "Développement en indépendent du site web Build-lol.com basée sur l'api de Riot games",
-  //     "Qui permettra à ses utilisateurs de visualiser les statistiques de leur personnage (League of Legend) en fonction de leur équipement d'un simple glisser déposer.",
-  //   ],
-  //   icon: iconCodingweb,
-  //   title: "CodingWeb (BluEx)",
-  //   picture: [
-  //     {
-  //       title: "Home Page",
-  //       img: homeBluEx,
-  //       isMobile: false,
-  //       desc: "Description img",
-  //     },
-  //   ],
-  //   skills: [
-  //     "Next JS",
-  //     "Nginx",
-  //     "API REST",
-  //     "Node JS",
-  //     "React JS",
-  //     "Tailwind CSS",
-  //   ],
-  //   link: {
-  //     git: "https://github.com/AlexPawlonski/Build-lol",
-  //     site: "https://buildlol.alexpawlonski.tech",
-  //   },
-  // },
 ];
+export const skills: ISkills = {
+  front: [
+    { title: "React JS", level: 5, fav: true },
+    { title: "Next JS", level: 3, fav: true },
+    { title: "TypeScript / JavaScript", level: 4, fav: true },
+    { title: "HTML / CSS", level: 5, fav: true },
+    { title: "Sass", level: 1, fav: false },
+    { title: "Tailwind CSS", level: 5, fav: true },
+    { title: "Bootstrap", level: 3, fav: false },
+    { title: "Emotion", level: 1, fav: false },
+    { title: "Axios", level: 4, fav: false },
+    { title: "React Query", level: 3, fav: false },
+    { title: "React Hook Form", level: 4, fav: false },
+    { title: "React Chart", level: 2, fav: false },
+    { title: "React D&D", level: 3, fav: false },
+  ],
+  back: [
+    { title: "Node JS", level: 5, fav: true },
+    { title: "Mongo DB", level: 1, fav: false },
+    { title: "FireBase", level: 2, fav: true },
+    { title: "Expresse JS", level: 1, fav: false },
+    { title: "Nest JS", level: 1, fav: false },
+  ],
+  server: [
+    { title: "Ngnix", level: 2, fav: false },
+    { title: "Jenkins", level: 1, fav: false },
+  ],
+  test: [{ title: "Jest", level: 2, fav: false }],
+  tools: [
+    { title: "Agile", level: 5, fav: false },
+    { title: "Storybook", level: 3, fav: true },
+    { title: "GitHub", level: 3, fav: false },
+    { title: "Figma", level: 3, fav: true },
+    { title: "Photoshop", level: 3, fav: false },
+  ],
+};

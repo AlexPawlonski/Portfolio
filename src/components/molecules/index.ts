@@ -1,3 +1,4 @@
 import ProjectComponent from "./ProjectComponent";
 import ProjectNav from "./ProjectNav";
-export { ProjectComponent, ProjectNav };
+import SkillItem from "./SkillItem";
+export { ProjectComponent, ProjectNav, SkillItem };
