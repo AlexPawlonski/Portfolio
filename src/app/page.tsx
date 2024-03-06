@@ -1,42 +1,15 @@
-"use client";
-import { Header, Nav, MenuFixed, Projects } from "@components/organisms";
+import {
+  Header,
+  Nav,
+  MenuFixed,
+  Projects,
+  Skills,
+} from "@components/organisms";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ProfilImg, Writer } from "@src/components/atoms";
-import { useEffect, useMemo, useRef, useState } from "react";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
-  const myRef: any = useRef();
-  const [headerVisible, setHeaderVisible] = useState(true);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      setHeaderVisible(entry.isIntersecting);
-    });
-    observer.observe(myRef.current);
-  }, []);
-
-  const [screenWidthSize, setScreenSize] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 1280
-  );
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      const handleResize = () => {
-        setScreenSize(window.innerWidth);
-      };
-      window.addEventListener("resize", handleResize);
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
-  }, []);
-
-  const pcPoint = useMemo(() => {
-    return { 1024: screenWidthSize > 1024, 1280: screenWidthSize > 1280 };
-  }, [screenWidthSize]);
-
   return (
     <main id="home" className="z-10 relative">
       <p className="absolute right-10 top-5 text-2xl">{`</body>`}</p>
@@ -67,17 +40,12 @@ export default function Home() {
           </a>
           <div className="group-hover:opacity-100 transition-all opacity-0 imgGradient absolute top-1 left-1 z-10 w-24 h-24"></div>
         </div>
-        <span ref={myRef} id="scrollPoint"></span>
       </section>
-      <div className="flex w-full lg:gap-14 lg:mt-10">
-        {!headerVisible && !pcPoint[1024] && <MenuFixed />}
-        {pcPoint[1024] && (
-          <div className="xl:w-[25%] lg:w-[30%]">
-            <MenuFixed />
-          </div>
-        )}
+      <div className="flex w-full lg:gap-14 lg:mt-10 relative">
+        <MenuFixed />
         <div className="w-full mt-4">
           <Projects />
+          <Skills />
         </div>
       </div>
     </main>

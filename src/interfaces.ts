@@ -20,3 +20,16 @@ export interface Picture {
   img: StaticImageData;
   isMobile: boolean;
 }
+
+export interface ISkill {
+  title: string;
+  level: number;
+  fav: boolean;
+}
+export interface ISkills {
+  front: ISkill[];
+  back: ISkill[];
+  server: ISkill[];
+  test: ISkill[];
+  tools: ISkill[];
+}

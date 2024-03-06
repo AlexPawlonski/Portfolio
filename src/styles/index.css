@@ -115,3 +115,21 @@ body {
     transform: rotate(360deg);
   }
 }
+
+.levelSkill {
+  height: 10px;
+  background: #69dbff;
+  transform: skew(-30deg);
+  -webkit-transform: skew(-30deg);
+  -moz-transform: skew(-30deg);
+  -o-transform: skew(-30deg);
+}
+.levelBase {
+  height: 10px;
+  background: #151823;
+  opacity: "20%";
+  transform: skew(-30deg);
+  -webkit-transform: skew(-30deg);
+  -moz-transform: skew(-30deg);
+  -o-transform: skew(-30deg);
+}

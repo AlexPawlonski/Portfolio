@@ -1,8 +1,10 @@
+"use client";
 import { useState } from "react";
 import { ProjectComponent, ProjectNav } from "../molecules";
 import { Picture, Project } from "@src/interfaces";
 import { projects } from "@src/datas";
 import { ProjectItem } from "../atoms";
+import { classNames } from "@src/utils";
 
 export default function Projects() {
   const [projectSelected, setProjectSelected] = useState<Project | undefined>();
@@ -10,7 +12,10 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="flex flex-col gap-2 lg:h-[1000px] h-[800px]"
+      className={classNames(
+        "flex flex-col gap-2 relative"
+      )}
+      style={{ height: "calc(100vh - 100px)" }}
     >
       <h2 className="text-2xl xl:text-5xl">Réalisation</h2>
       <ProjectNav
