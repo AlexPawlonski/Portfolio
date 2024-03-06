@@ -17,7 +17,7 @@ export default function ProjectComponent({
 }: Props) {
   if (imgSelected) {
     return (
-      <article className="w-full flex flex-col items-center">
+      <article className="w-full flex flex-col items-center ">
         <Image
           src={imgSelected.img.src}
           alt={`${imgSelected.title}-Icon`}
@@ -35,8 +35,11 @@ export default function ProjectComponent({
     );
   } else {
     return (
-      <article className="bg-drakBlue bg-opacity-40 rounded-xl p-4 lg:p-10 lg:h-[80%] h-[85%] grid lg:grid-cols-2 lg:grid-rows-10 grid-rows-12">
-        <div className="flex flex-col lg:flex-row lg:justify-between justify-around col-span-2 lg:row-span-1 row-span-2 text-blueReact">
+      <article
+        className="bg-drakBlue bg-opacity-40 rounded-xl p-4 lg:p-10 relative"
+        style={{ height: "calc(100% - 200px)" }}
+      >
+        <div className="flex flex-col lg:flex-row lg:justify-between justify-around text-blueReact gap-2 lg:items-center mb-2">
           <h2 className="text-3xl xl:text-5xl lg:text-3xl">{`<${project.name}/>`}</h2>
           <div className="flex items-start gap-6">
             {project.link.git && (
@@ -53,7 +56,8 @@ export default function ProjectComponent({
             />
           </div>
         </div>
-        <div className="col-span-2 row-span-10 relative lg:flex lg:gap-10">
+
+        <div className="relative lg:flex lg:gap-10 h-full">
           <div className="flex flex-col justify-between gap-4 h-[60%] lg:h-full lg:w-[60%] pb-5 ">
             <div className="flex flex-col gap-3 lg:text-lg xl:text-xl overflow-y-scroll pr-3">
               {project.description.map((text, key) => (
@@ -66,7 +70,8 @@ export default function ProjectComponent({
               ))}
             </div>
           </div>
-          <div className="grid grid-cols-2 overflow-y-scroll pr-3 h-[40%] lg:h-full lg:w-[40%]">
+
+          <div className="grid grid-cols-2 overflow-y-scroll pr-3 h-[25%] lg:h-[90%] lg:w-[40%]">
             {project.picture.map((picture, key) => (
               <ImgItem
                 key={key}

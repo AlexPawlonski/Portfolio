@@ -221,36 +221,6 @@ export const projects: Project[] = [
       site: "https://www.linkedin.com/company/neomanis/",
     },
   },
-  // {
-  //   id: 3,
-  //   name: "CodingWeb BluEx",
-  //   description: [
-  //     "Développement en indépendent du site web Build-lol.com basée sur l'api de Riot games",
-  //     "Qui permettra à ses utilisateurs de visualiser les statistiques de leur personnage (League of Legend) en fonction de leur équipement d'un simple glisser déposer.",
-  //   ],
-  //   icon: iconCodingweb,
-  //   title: "CodingWeb (BluEx)",
-  //   picture: [
-  //     {
-  //       title: "Home Page",
-  //       img: homeBluEx,
-  //       isMobile: false,
-  //       desc: "Description img",
-  //     },
-  //   ],
-  //   skills: [
-  //     "Next JS",
-  //     "Nginx",
-  //     "API REST",
-  //     "Node JS",
-  //     "React JS",
-  //     "Tailwind CSS",
-  //   ],
-  //   link: {
-  //     git: "https://github.com/AlexPawlonski/Build-lol",
-  //     site: "https://buildlol.alexpawlonski.tech",
-  //   },
-  // },
 ];
 export const skills: ISkills = {
   front: [

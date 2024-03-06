@@ -1,9 +1,20 @@
+"use client";
+import { useState } from "react";
 import { skills } from "@src/datas";
 import { SkillItem } from "../molecules";
 import { LevelBar } from "../atoms";
 import { ISkill } from "@src/interfaces";
-import { useState } from "react";
 import { classNames } from "@src/utils";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  IconDefinition,
+  faPencil,
+  faServer,
+  faScrewdriverWrench,
+  faCubes,
+  faExplosion,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Skills() {
   const [isActive, setIsActive] = useState<
@@ -16,6 +27,7 @@ export default function Skills() {
     onClick,
     isActive,
     maxHeight,
+    icon,
   }: {
     title: "Front-end" | "Back-end" | "Server" | "Test" | "Outils";
     skillArray: ISkill[];
@@ -24,18 +36,23 @@ export default function Skills() {
     ) => void;
     isActive: boolean;
     maxHeight: boolean;
+    icon: IconDefinition;
   }) => {
     return (
-      <div>
+      <div className="bg-drakBlue rounded-md p-4 py-2 bg-opacity-20">
         <div
           className={classNames(
-            isActive ? "max-h-none" : "max-h-52",
-            "text-center overflow-hidden transition-all"
+            isActive ? "max-h-none" : "max-h-52 lg:max-h-none",
+            "text-center lg:text-start overflow-hidden transition-all"
           )}
-          style={{ transition: "max-height 0.5s ease" }}
+          style={{
+            transition: "max-height 0.5s ease",
+          }}
         >
-          <h3 className="text-xl my-2">{title}</h3>
-          <ul className="flex flex-col gap-2 mx-1">
+          <h3 className="text-xl mb-4 lg:text-2xl">
+            {title} <FontAwesomeIcon icon={icon} className="" />
+          </h3>
+          <ul className="flex flex-col gap-2 lg:gap-8 mx-4 lg:grid lg:grid-cols-4">
             {skillArray.map((skill, key) => (
               <SkillItem key={key} skill={skill} />
             ))}
@@ -43,7 +60,7 @@ export default function Skills() {
         </div>
         {maxHeight && (
           <div
-            className="flex items-center w-full gap-6 mt-2 cursor-pointer"
+            className="flex items-center w-full gap-6 mt-2 cursor-pointer lg:hidden"
             onClick={() => (isActive ? onClick(undefined) : onClick(title))}
           >
             <span className="border-2 w-full"></span>
@@ -58,7 +75,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="lg:h-[1000px] h-[800px]">
+    <section id="skills">
       <div className="flex items-end gap-10 justify-between">
         <h2 className="text-2xl xl:text-5xl">Compétence</h2>
         <LevelBar level={3} base={5} legendIsActive />
@@ -70,6 +87,7 @@ export default function Skills() {
           onClick={(title) => setIsActive(title)}
           isActive={Boolean(isActive === "Front-end")}
           maxHeight={Boolean(skills.front.length > 3)}
+          icon={faPencil}
         />
         <ListSkills
           title="Back-end"
@@ -77,20 +95,7 @@ export default function Skills() {
           onClick={(title) => setIsActive(title)}
           isActive={Boolean(isActive === "Back-end")}
           maxHeight={Boolean(skills.back.length > 3)}
-        />
-        <ListSkills
-          title="Server"
-          skillArray={skills.server}
-          onClick={(title) => setIsActive(title)}
-          isActive={Boolean(isActive === "Server")}
-          maxHeight={Boolean(skills.server.length > 3)}
-        />
-        <ListSkills
-          title="Test"
-          skillArray={skills.test}
-          onClick={(title) => setIsActive(title)}
-          isActive={Boolean(isActive === "Test")}
-          maxHeight={Boolean(skills.test.length > 3)}
+          icon={faCubes}
         />
         <ListSkills
           title="Outils"
@@ -98,6 +103,23 @@ export default function Skills() {
           onClick={(title) => setIsActive(title)}
           isActive={Boolean(isActive === "Outils")}
           maxHeight={Boolean(skills.tools.length > 3)}
+          icon={faScrewdriverWrench}
+        />
+        <ListSkills
+          title="Server"
+          skillArray={skills.server}
+          onClick={(title) => setIsActive(title)}
+          isActive={Boolean(isActive === "Server")}
+          maxHeight={Boolean(skills.server.length > 3)}
+          icon={faServer}
+        />
+        <ListSkills
+          title="Test"
+          skillArray={skills.test}
+          onClick={(title) => setIsActive(title)}
+          isActive={Boolean(isActive === "Test")}
+          maxHeight={Boolean(skills.test.length > 3)}
+          icon={faExplosion}
         />
       </div>
     </section>

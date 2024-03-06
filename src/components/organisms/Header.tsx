@@ -35,16 +35,16 @@ export default function Header({ isFixed }: Props) {
               : "text-xl my-2 lg:my-4 lg:text-2xl"
           )}
         >
-          Développeur Full-Stack
+          Développeur Front-end
         </h2>
         <h3
           className={classNames(
             isFixed ? "flex flex-col gap-2" : "lg:text-2xl flex gap-2 text-xs"
           )}
         >
+          <p>{"<Next JS />"}</p>
+          <p>{"<TypeScript />"}</p> 
           <p>{"<Node JS />"}</p>
-          <p>{"<React JS />"}</p>
-          <p>{"<TypeScript />"}</p>
         </h3>
       </div>
     </header>
