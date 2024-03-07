@@ -21,27 +21,20 @@ export default function Nav({ forceVertical = false, isFixed = false }: Props) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex items-center flex-col gap-4 lg:mb-36">
-      {forceVertical && (
-        <div
-          className={classNames(
-            "transform transition-all bg-drakBlue rounded-full h-8 w-8 flex items-center justify-center ",
-            isOpen && "rotate-180"
-          )}
-          onClick={() => setIsOpen((old) => !old)}
-        >
-          <FontAwesomeIcon icon={faChevronDown} className="text-xl" />
-        </div>
+    <nav
+      className={classNames(
+        "flex items-center flex-col gap-4",
+        !isFixed && "lg:mb-36"
       )}
+    >
       {(!forceVertical || isOpen) && (
         <>
           <ul
             className={classNames(
+              "flex gap-2 rainbowGlow",
               forceVertical || isFixed
-                ? "flex-col lg:flex-row lx:gap-0 gap-2"
-                : "lg:flex-col gap-4",
-              "flex items-center",
-              isFixed && "lg:w-full max-w-full flex-wrap justify-center gap-4"
+                ? "flex-col lg:flex-row lx:gap-0 text-2xl"
+                : "lg:flex-col text-2xl"
             )}
           >
             <NavItem id={"home"} icon={<FontAwesomeIcon icon={faHome} />} />
@@ -59,8 +52,19 @@ export default function Nav({ forceVertical = false, isFixed = false }: Props) {
               icon={<FontAwesomeIcon icon={faPaperPlane} />}
             />
           </ul>
-          <p className="text-center lg:text-xl">{`</nav>`}</p>
+          {!isFixed && <p className="text-center text-base">{`</nav>`}</p>}
         </>
+      )}
+      {forceVertical && (
+        <div
+          className={classNames(
+            "transform transition-all bg-drakBlue rounded-full h-8 w-8 flex items-center justify-center ",
+            !isOpen && "rotate-180"
+          )}
+          onClick={() => setIsOpen((old) => !old)}
+        >
+          <FontAwesomeIcon icon={faChevronDown} className="text-xl" />
+        </div>
       )}
     </nav>
   );

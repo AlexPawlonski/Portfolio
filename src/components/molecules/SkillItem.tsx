@@ -11,12 +11,12 @@ interface Props {
 export default function SkillItem({ skill }: Props) {
   return (
     <li className="flex flex-col gap-2 col-span-1">
-      <label className="flex items-center justify-between text-sm">
+      <label className="flex items-center justify-between">
         <h3>{skill.title}</h3>
         {skill.fav ? (
-          <FontAwesomeIcon icon={starSolid} className="" />
+          <FontAwesomeIcon icon={starSolid} className="rainbowGlow" />
         ) : (
-          <FontAwesomeIcon icon={starReagular} className="" />
+          <FontAwesomeIcon icon={starReagular} className=" opacity-30" />
         )}
       </label>
       <LevelBar level={skill.level} base={5} />
