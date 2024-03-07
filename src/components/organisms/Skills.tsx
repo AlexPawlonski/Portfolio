@@ -39,7 +39,7 @@ export default function Skills() {
     icon: IconDefinition;
   }) => {
     return (
-      <div className="bg-drakBlue rounded-md p-4 py-2 bg-opacity-20">
+      <div className="bg-drakBlue rounded-xl px-6 py-4 bg-opacity-40">
         <div
           className={classNames(
             isActive ? "max-h-none" : "max-h-52 lg:max-h-none",
@@ -50,9 +50,10 @@ export default function Skills() {
           }}
         >
           <h3 className="text-xl mb-4 lg:text-2xl">
-            {title} <FontAwesomeIcon icon={icon} className="" />
+            {title}
+            <FontAwesomeIcon icon={icon} className="ml-4" />
           </h3>
-          <ul className="flex flex-col gap-2 lg:gap-8 mx-4 lg:grid lg:grid-cols-4">
+          <ul className="flex flex-col gap-2 lg:gap-4 mx-1 lg:grid lg:grid-cols-4">
             {skillArray.map((skill, key) => (
               <SkillItem key={key} skill={skill} />
             ))}
@@ -80,7 +81,7 @@ export default function Skills() {
         <h2 className="text-2xl xl:text-5xl">Compétence</h2>
         <LevelBar level={3} base={5} legendIsActive />
       </div>
-      <div className="mt-10 mx-5 flex flex-col gap-4">
+      <div className="mt-10 flex flex-col gap-6">
         <ListSkills
           title="Front-end"
           skillArray={skills.front}

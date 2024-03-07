@@ -15,7 +15,7 @@ export default function Projects() {
       className={classNames(
         "flex flex-col gap-2 relative"
       )}
-      style={{ height: "calc(100vh - 100px)" }}
+      style={{ height: "calc(100vh)" }}
     >
       <h2 className="text-2xl xl:text-5xl">Réalisation</h2>
       <ProjectNav
