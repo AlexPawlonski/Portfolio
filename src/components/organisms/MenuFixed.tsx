@@ -27,19 +27,20 @@ export default function MenuFixed() {
     <section
       className={classNames(
         !showComponent && "hidden lg:block",
-        "flex flex-col gap-4 items-center fixed lg:sticky top-4 right-3 z-50 h-full"
+        "flex flex-col gap-4 items-center fixed lg:sticky bottom-4 lg:top-4 right-3 z-50 lg:h-full"
       )}
     >
-      <ProfilImg size="w-20 lg:hidden" showText={false} isFixed={true} />
       <div className="hidden lg:block w-full">
         <Header isFixed={true} />
       </div>
       <div className="lg:hidden">
         <Nav forceVertical={true} isFixed={true} />
       </div>
-      <div className="hidden lg:block my-10">
+      <div className="hidden lg:block mt-10 mb-2">
         <Nav isFixed={true} />
       </div>
+      <ProfilImg size="w-20 lg:hidden" showText={false} isFixed={true} />
+      <p className="text-center lg:text-xl">{`</nav>`}</p>
     </section>
   );
 }

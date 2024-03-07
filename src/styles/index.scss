@@ -35,7 +35,6 @@
 .rainbowGlow {
   position: relative;
   color: #252b37;
-  background-color: #151823;
   animation: textColor 10s ease infinite;
   @keyframes textColor {
     0% {
@@ -50,11 +49,48 @@
   }
 }
 
+
+
+.levelSkill {
+  height: 10px;
+  background: #69dbff;
+  transform: skew(-30deg);
+  -webkit-transform: skew(-30deg);
+  -moz-transform: skew(-30deg);
+  -o-transform: skew(-30deg);
+  animation: bgAnim 10s ease infinite;
+  @keyframes bgAnim {
+    0% {
+      background: #b530ff;
+    }
+    50% {
+      background: #0fffc1;
+    }
+    100% {
+      background: #b530ff;
+    }
+  }
+}
+.levelBase {
+  height: 10px;
+  background: #595c61;
+  transform: skew(-30deg);
+  -webkit-transform: skew(-30deg);
+  -moz-transform: skew(-30deg);
+  -o-transform: skew(-30deg);
+}
+
 .boxShadowRainbow {
   @include backlight(0, 5vw, 10vw, 0.75, #0fffc1, #b530ff, 10s);
 }
 .boxShadowRainbowHover:hover {
-  @include backlight(0, 0vw, 1vw, 0.8, #0fffc1, #b530ff, 10s);
+  @include backlight(0, 0px, 20px, 0.5, #0fffc1, #b530ff, 10s);
+  color: azure;
+  animation: none;
+  transition: all;
+}
+.boxShadowRainbowLinkHover:hover {
+  @include backlight(0px, 10px, 80px, 0.5, #0fffc1, #b530ff, 10s);
   color: azure;
   animation: none;
   transition: all;
