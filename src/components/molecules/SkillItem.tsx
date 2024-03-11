@@ -12,7 +12,7 @@ export default function SkillItem({ skill }: Props) {
   return (
     <li className="flex flex-col gap-2 col-span-1">
       <label className="flex items-center justify-between">
-        <h3 className="text-lg">{skill.title}</h3>
+        <h3 className="text-lg lg:text-2xl">{skill.title}</h3>
         {skill.fav ? (
           <FontAwesomeIcon icon={starSolid} className="rainbowGlow" />
         ) : (
