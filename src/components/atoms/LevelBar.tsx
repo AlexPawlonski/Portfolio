@@ -20,7 +20,7 @@ export default function LevelBar({ level, base, legendIsActive }: Props) {
       divsLevel.push(
         <div
           key={i + "level"}
-          className="levelSkill w-full"
+          className="levelSkill w-full h-[5px] lg:h-[10px]"
           style={{ boxShadow: "#2c116e 0px 0px 10px" }}
         ></div>
       );
@@ -29,7 +29,7 @@ export default function LevelBar({ level, base, legendIsActive }: Props) {
     const divsBase = [];
     for (let i = 0; i < base - level; i++) {
       divsBase.push(
-        <div key={i + "base"} className="levelBase w-full opacity-40 "></div>
+        <div key={i + "base"} className="levelBase w-full opacity-40 h-[5px] lg:h-[10px]"></div>
       );
     }
     return (

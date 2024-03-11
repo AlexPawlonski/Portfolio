@@ -21,7 +21,7 @@ export default function SkillSection({
     <div className="bg-drakBlue rounded-xl px-6 py-4 bg-opacity-40">
       <ShowMore maxHeight={maxHeight}>
         <>
-          <h3 className="text-xl mb-4 lg:text-2xl">
+          <h3 className="text-xl mb-4 lg:text-3xl">
             {title}
             <FontAwesomeIcon icon={icon} className="ml-4" />
           </h3>

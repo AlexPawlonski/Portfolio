@@ -250,7 +250,10 @@ export const skills: ISkills = {
     { title: "Ngnix", level: 2, fav: false },
     { title: "Jenkins", level: 1, fav: false },
   ],
-  test: [{ title: "Jest", level: 2, fav: false }],
+  test: [
+    { title: "Jest", level: 2, fav: false },
+    { title: "Playwright", level: 2, fav: false },
+  ],
   tools: [
     { title: "Agile", level: 5, fav: false },
     { title: "Storybook", level: 3, fav: true },
