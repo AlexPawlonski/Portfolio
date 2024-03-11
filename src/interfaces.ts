@@ -33,3 +33,19 @@ export interface ISkills {
   test: ISkill[];
   tools: ISkill[];
 }
+
+export interface Work {
+  title: string;
+  company: string;
+  type: string;
+  img: StaticImageData;
+  linkWork: string;
+  date: {
+    start: string;
+    end: string;
+    time: string;
+  };
+  location: string;
+  desc: string[];
+  skills: string[];
+}
