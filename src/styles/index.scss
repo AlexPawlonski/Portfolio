@@ -49,10 +49,8 @@
   }
 }
 
-
-
 .levelSkill {
-  height: 10px;
+  height: 5px;
   background: #69dbff;
   transform: skew(-30deg);
   -webkit-transform: skew(-30deg);
@@ -71,8 +69,9 @@
     }
   }
 }
+
 .levelBase {
-  height: 10px;
+  height: 5px;
   background: #595c61;
   transform: skew(-30deg);
   -webkit-transform: skew(-30deg);
@@ -83,19 +82,22 @@
 .boxShadowRainbow {
   @include backlight(0, 5vw, 10vw, 0.75, #0fffc1, #b530ff, 10s);
 }
+
 .boxShadowRainbowHover:hover {
   @include backlight(0, 0px, 20px, 0.5, #0fffc1, #b530ff, 10s);
   color: azure;
   animation: none;
   transition: all;
 }
+
 .boxShadowRainbowLinkHover:hover {
   @include backlight(0px, 10px, 80px, 0.5, #0fffc1, #b530ff, 10s);
   color: azure;
   animation: none;
   transition: all;
 }
-.boxShadowHover:hover {
+.b
+oxShadowHover:hover {
   @include backlight(0, 2, 5vw, 0.5, #0fffc1, #b530ff, 1s);
 }
 

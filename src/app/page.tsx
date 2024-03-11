@@ -4,6 +4,7 @@ import {
   MenuFixed,
   Projects,
   Skills,
+  Work,
 } from "@components/organisms";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ProfilImg, Writer } from "@src/components/atoms";
@@ -46,6 +47,7 @@ export default function Home() {
         <div className="w-full mt-4 flex flex-col gap-10">
           <Projects />
           <Skills />
+          <Work />
         </div>
       </div>
     </main>

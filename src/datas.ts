@@ -7,7 +7,6 @@ import {
   settingMobile,
   stateMobile,
 } from "@public/img/buildlol";
-import { homeBluEx, iconCodingweb } from "@public/img/bulex";
 import {
   blogdetail,
   bookedite,
@@ -20,12 +19,14 @@ import {
   ticketdetail,
 } from "@public/img/neoserver";
 
-import { Project, ISkills } from "./interfaces";
+import { Project, ISkills, Work } from "./interfaces";
 import {
   chatNeohelper,
   homeNeohelper,
   settingNeohelper,
 } from "@public/img/neohelper";
+
+import { neomanisImg, codingWebImg, ceffinImg } from "@public/img/work";
 
 export const projects: Project[] = [
   {
@@ -258,3 +259,99 @@ export const skills: ISkills = {
     { title: "Photoshop", level: 3, fav: false },
   ],
 };
+
+export const works: Work[] = [
+  {
+    title: "Développeur Front-end",
+    company: "Neomanis",
+    type: "CDI",
+    img: neomanisImg,
+    linkWork: "https://www.linkedin.com/company/neomanis/",
+    date: {
+      start: "Juillet 2021",
+      end: "Juin 2023",
+      time: "2 ans",
+    },
+    location: "Angers, Pays de la Loire, France (Full remote)",
+    desc: [
+      "Poste de développeur Front-end travaillant sur le développement d’une application en Microservices.",
+      "Au sein d’une équipe utilisant la méthode Agile et en 100 % télétravail.",
+      "J’ai pu me perfectionner sur des technologies telles que TypeScript ou React.",
+      "Mais aussi relever des défis techniques demandant de solides compétences en développement UX/UI et intégration CSS.",
+    ],
+    skills: [
+      "React JS",
+      "TypeScript",
+      "Node JS",
+      "Tailwind css",
+      "Storybook",
+      "Tauri JS",
+      "Expresse JS",
+    ],
+  },
+  {
+    title: "Développeur Web Full-Stack",
+    company: "CodingWeb",
+    type: "Stage",
+    img: codingWebImg,
+    linkWork: "https://www.linkedin.com/company/codingweb/",
+    date: {
+      start: "Novembre 2020",
+      end: "Décembre 2020",
+      time: "2 mois",
+    },
+    location: "Beaucouzé, Pays de la Loire, France (Hybride remote)",
+    desc: [
+      "J'ai réalisé un stage de fin d'études dans l'entreprise CodingWeb durée de 2 mois, dans lequel j'ai travaillé sur deux projets :",
+      "",
+      "- Un projet nommé BluEx, qui consistait à mettre à jour technologiquement une plate-forme destinée à des professionnels pour gérer des événements ou des salons. J'ai donc travaillé sur un environnement utilisant le framework Meteor JS, dans lequel je devais insérer des composants React pour convertir progressivement les différentes parties de la plate-forme.",
+      " ",
+      "- L'autre projet sur lequel j'ai travaillé durant mon stage et qui m'a donné la maîtrise de la bibliothèque Tailwind css, a été sur la mise à jour visuelle du site Meethem.fr.",
+      "",
+      "Dans lequel je devais d'abord mettre à jour le framework Meteor JS de sa version datant de 2015 la dernière version sortie en 2020. Une fois la mise à jour effectuée, j'ai eu mission de remplacer l'intégralité de la mise en page et des styles géré par Bootstrap par une version plus moderne et plus optimiser utilisant Tailwind css.",
+    ],
+    skills: [
+      "React JS",
+      "JavaScript",
+      "Node JS",
+      "Tailwind css",
+      "Storybook",
+      "Bootstrap",
+      "Meteor JS",
+    ],
+  },
+];
+
+export const schools: Work[] = [
+  {
+    title: "Diplôme de développeur Full-Stack",
+    company: "CEFii",
+    type: "Formation pro",
+    img: ceffinImg,
+    linkWork: "https://www.linkedin.com/school/cefii/",
+    date: {
+      start: "Avril 2020",
+      end: "Janvier 2021",
+      time: "8 mois",
+    },
+    location: "Angers, Pays de la Loire, France",
+    desc: [
+      "Durant ma formation, j'ai eu l'occasion d'explorer divers aspects du métier de développeur.",
+      "",
+      "Dans un premier temps, j'ai travaillé avec PHP, SQL et WordPress, tout en participant à différents projets utilisant ces technologies.",
+      "De plus, je me suis également impliqué dans plusieurs projets en JavaScript, notamment sur des sites vitrines et un projet en Angular.",
+      "Mais aussi, j'ai eu l'opportunité de contribuer à un projet d'application mobile avec Android Studio, principalement en me concentrant sur l'intégration des interfaces et le design de l'application.",
+      "",
+      "Ces expériences m'ont permis d'approfondir mes connaissances dans le domaine du développement Web et d'acquérir les compétences essentielles pour travailler en équipe ou prendre en charge la direction d'un projet.",
+    ],
+    skills: [
+      "React JS",
+      "Angular JS",
+      "JavaScript",
+      "HTML / CSS",
+      "PHP",
+      "Wordpresse",
+      "MySQL",
+    ],
+  },
+];

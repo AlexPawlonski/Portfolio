@@ -5,6 +5,7 @@ import ImgItem from "./ImgItem";
 import ButtonLink from "./ButtonLink";
 import Writer from "./Writer";
 import LevelBar from "./LevelBar";
+import ShowMore from "./ShowMore";
 
 export {
   ProfilImg,
@@ -14,4 +15,5 @@ export {
   ImgItem,
   Writer,
   LevelBar,
+  ShowMore,
 };
