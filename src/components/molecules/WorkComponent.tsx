@@ -23,14 +23,14 @@ export default function WorkComponent({ work }: Props) {
           <div className="flex flex-col gap-2">
             <h2 className="textAnnimColor text-xl lg:text-3xl">{work.title}</h2>
             <div className="flex items-center gap-4 lg:text-2xl">
-              <a href={work.linkWork} className="text-blueReact">
+              <a href={work.linkWork} className="text-blueReact boxShadowRainbowLinkHover flex items-center gap-2 hover:scale-105 transition-all transform">
                 {work.company}
                 <FontAwesomeIcon
                   icon={faArrowUpRightFromSquare}
-                  className="ml-2 text-xs"
+                  className="ml-2 text-xs lg:text-base mb-[1px] lg:mb-[2px]"
                 />
               </a>
-              <h4 className="text-sm text-redReact">({work.type})</h4>
+              <h4 className="text-sm lg:text-xl text-redReact">({work.type})</h4>
             </div>
           </div>
         </div>

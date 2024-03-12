@@ -4,5 +4,6 @@ import MenuFixed from "./MenuFixed";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Work from "./Work";
+import Contact from "./Contact";
 
-export { Header, Nav, Projects, MenuFixed, Skills, Work };
+export { Header, Nav, Projects, MenuFixed, Skills, Work, Contact };

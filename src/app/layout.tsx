@@ -18,6 +18,10 @@ export default function Layout({ children }: Props) {
       </head>
       <body className="px-5 lg:px-8 xl:px-10 2xl:max-w-[80%] xl:max-w-full mx-auto">
         {children}
+        <footer className="text-left lg:text-right p-4">
+          <p>alex pawlonski</p>
+          <p>Copyright (c) 2024</p>
+        </footer>
         <div className="fixed top-0 inset-0 overflow-hidden">
           <div className="jumbo absolute -inset-[10px] opacity-50"></div>
         </div>
