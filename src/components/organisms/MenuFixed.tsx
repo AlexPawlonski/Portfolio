@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Header, Nav } from ".";
 import { ProfilImg } from "../atoms";
 import { classNames } from "@src/utils";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 export default function MenuFixed() {
   const [showComponent, setShowComponent] = useState(false);
@@ -41,6 +43,35 @@ export default function MenuFixed() {
       </div>
       <ProfilImg size="w-20 lg:hidden" showText={false} isFixed={true} />
       <p className="text-center lg:text-xl">{`</nav>`}</p>
+
+      <div className="lg:flex items-center hidden justify-center mt-6 text-xl gap-4">
+        <div className="flex items-center">
+          <a
+            href="https://www.linkedin.com/in/alex-pawlonski/"
+            target="_blanck"
+            className="p-2 flex justify-center textAnnimColor cursor-pointer transform transition-all hover:scale-110 relative boxShadowRainbowHover z-20"
+          >
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              className="text-2xl lg:text-4xl"
+            />
+          </a>
+          <p>Linkdin</p>
+        </div>
+        <div className="flex items-center">
+          <a
+            href="https://github.com/AlexPawlonski"
+            target="_blanck"
+            className="p-2 flex justify-center textAnnimColor cursor-pointer transform transition-all hover:scale-110 relative boxShadowRainbowHover z-20"
+          >
+            <FontAwesomeIcon
+              icon={faGithub}
+              className="text-2xl lg:text-4xl "
+            />
+          </a>
+          <p>GitHub</p>
+        </div>
+      </div>
     </section>
   );
 }

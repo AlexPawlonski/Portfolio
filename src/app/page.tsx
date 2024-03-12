@@ -5,6 +5,7 @@ import {
   Projects,
   Skills,
   Work,
+  Contact,
 } from "@components/organisms";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ProfilImg, Writer } from "@src/components/atoms";
@@ -50,6 +51,7 @@ export default function Home() {
           <Work />
         </div>
       </div>
+      <Contact />
     </main>
   );
 }
