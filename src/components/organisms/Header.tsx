@@ -1,5 +1,6 @@
 import { classNames } from "@src/utils";
 import { ProfilImg } from "../atoms";
+import LinkCV from "../atoms/LinkCV";
 
 interface Props {
   isFixed?: boolean;
@@ -20,14 +21,20 @@ export default function Header({ isFixed }: Props) {
             : "text-center lg:text-start m-2 lg:m-6"
         }
       >
-        <h1
-          className={classNames(
-            isFixed ? "xl:text-5xl lg:text-3xl" : "text-3xl lg:text-5xl",
-            "text-blueReact textShadowsBlue"
-          )}
-        >
-          Alex Pawlonski
-        </h1>
+        <div className="flex items-end gap-10">
+          <h1
+            className={classNames(
+              isFixed ? "xl:text-5xl lg:text-3xl" : "text-3xl lg:text-5xl",
+              "text-blueReact textShadowsBlue"
+            )}
+          >
+            Alex Pawlonski
+          </h1>
+          <LinkCV className=" w-fit text-2xl text-redReact hover:text-blueReact hover:underline cursor-pointer">
+            Mon CV à jour ICI !
+          </LinkCV>
+        </div>
+
         <h2
           className={classNames(
             isFixed
@@ -35,7 +42,7 @@ export default function Header({ isFixed }: Props) {
               : "text-xl my-2 lg:my-4 lg:text-2xl"
           )}
         >
-          Développeur Front-end
+          Développeur Full-Stack
         </h2>
         <h3
           className={classNames(
@@ -43,7 +50,7 @@ export default function Header({ isFixed }: Props) {
           )}
         >
           <p>{"<Next JS />"}</p>
-          <p>{"<TypeScript />"}</p> 
+          <p>{"<TypeScript />"}</p>
           <p>{"<Node JS />"}</p>
         </h3>
       </div>

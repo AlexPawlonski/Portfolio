@@ -1,3 +1,4 @@
+import { UpdateAlert } from "@src/components/UpdateAlert";
 import "@styles/index.css";
 import "@styles/index.scss";
 
@@ -16,7 +17,7 @@ export default function Layout({ children }: Props) {
         />
         <link rel="icon" href="/icon.png" sizes="any" />
       </head>
-      <body className="px-5 lg:px-8 xl:px-10 2xl:max-w-[80%] xl:max-w-full mx-auto">
+      <body className="px-5 lg:px-8 xl:px-10 2xl:max-w-[80%] xl:max-w-full mx-auto relative">
         {children}
         <footer className="text-left lg:text-right p-4">
           <p>alex pawlonski</p>
@@ -25,6 +26,7 @@ export default function Layout({ children }: Props) {
         <div className="fixed top-0 inset-0 overflow-hidden">
           <div className="jumbo absolute -inset-[10px] opacity-50"></div>
         </div>
+        <UpdateAlert />
       </body>
     </html>
   );
