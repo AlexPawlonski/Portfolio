@@ -21,16 +21,10 @@ export default function Home() {
             <ProfilImg size=" xl:w-80 lg:w-52 w-32" />
             <Header />
           </div>
-          <Writer
-            phrases={[
-              "Hi!",
-              "Bienvenue sur mon PortFolio :D",
-              "Work in progress...",
-            ]}
-          />
+          <Writer phrases={["Hi!", "Bienvenue sur mon PortFolio :D"]} />
         </div>
         <Nav />
-        <div className="absolute bottom-5 lg:bottom-20 mx-auto group">
+        <div className="absolute bottom-10 mx-auto group">
           <a
             href={`#projects`}
             className="bg-white lg:h-20 lg:w-20 w-14 h-14 rounded-full flex items-center justify-center group-hover:scale-110 transform transition-all cursor-pointer relative z-20"

@@ -58,7 +58,7 @@ export default function Nav({ forceVertical = false, isFixed = false }: Props) {
       {forceVertical && (
         <div
           className={classNames(
-            "transform transition-all bg-drakBlue rounded-full h-8 w-8 flex items-center justify-center ",
+            "transform transition-all bg-drakBlue rounded-full h-8 w-8 flex items-center justify-center mb-2",
             !isOpen && "rotate-180"
           )}
           onClick={() => setIsOpen((old) => !old)}

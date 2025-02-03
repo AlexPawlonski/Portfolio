@@ -10,7 +10,7 @@ interface Props {
 
 export default function WorkComponent({ work }: Props) {
   return (
-    <div className="flex flex-col gap-4 bg-drakBlue rounded-xl px-6 py-4 bg-opacity-40">
+    <div className="flex flex-col gap-4 p-5 bg-drakBlue rounded-xl bg-opacity-40 ">
       <div className="flex flex-col gap-2">
         <div className="flex items-center gap-4">
           <Image
@@ -21,9 +21,9 @@ export default function WorkComponent({ work }: Props) {
             className="rounded-sm w-20 lg:w-28"
           />
           <div className="flex flex-col gap-2">
-            <h2 className="textAnnimColor text-xl lg:text-3xl">{work.title}</h2>
+            <h2 className="text-blueReact text-xl lg:text-3xl">{work.title}</h2>
             <div className="flex items-center gap-4 lg:text-2xl">
-              <a href={work.linkWork} className="text-blueReact boxShadowRainbowLinkHover flex items-center gap-2 hover:scale-105 transition-all transform">
+              <a href={work.linkWork} className="textAnnimColor boxShadowRainbowLinkHover flex items-center gap-2 hover:scale-105 transition-all transform">
                 {work.company}
                 <FontAwesomeIcon
                   icon={faArrowUpRightFromSquare}

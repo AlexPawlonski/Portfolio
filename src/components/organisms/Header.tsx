@@ -1,6 +1,7 @@
 import { classNames } from "@src/utils";
 import { ProfilImg } from "../atoms";
-import LinkCV from "../atoms/LinkCV";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 interface Props {
   isFixed?: boolean;
@@ -16,43 +17,44 @@ export default function Header({ isFixed }: Props) {
       )}
       <div
         className={
-          isFixed
-            ? "flex flex-col gap-2 m-2 xl:m-4 2xl:m-6"
-            : "text-center lg:text-start m-2 lg:m-6"
+          isFixed ? "flex flex-col" : "text-start m-2 lg:m-6 flex flex-col"
         }
       >
-        <div className="flex items-end gap-10">
-          <h1
-            className={classNames(
-              isFixed ? "xl:text-5xl lg:text-3xl" : "text-3xl lg:text-5xl",
-              "text-blueReact textShadowsBlue"
-            )}
-          >
-            Alex Pawlonski
-          </h1>
-          <LinkCV className=" w-fit text-2xl text-redReact hover:text-blueReact hover:underline cursor-pointer">
-            Mon CV à jour ICI !
-          </LinkCV>
-        </div>
-
+        <h1
+          className={classNames(
+            isFixed ? "xl:text-5xl lg:text-3xl" : "text-3xl lg:text-5xl",
+            "text-blueReact textShadowsBlue"
+          )}
+        >
+          Alex Pawlonski
+        </h1>
         <h2
           className={classNames(
-            isFixed
-              ? "xl:text-xl lg:text-sm my-2"
-              : "text-xl my-2 lg:my-4 lg:text-2xl"
+            isFixed ? "xl:text-xl lg:text-sm" : "text-xl lg:text-2xl",
+            "my-3 text-redReact min-w-max"
           )}
         >
-          Développeur Full-Stack
+          Développeur Front-end passionné
         </h2>
-        <h3
-          className={classNames(
-            isFixed ? "flex flex-col gap-2" : "lg:text-2xl flex gap-2 text-xs"
-          )}
-        >
-          <p>{"<Next JS />"}</p>
-          <p>{"<TypeScript />"}</p>
-          <p>{"<Node JS />"}</p>
-        </h3>
+        <div className="flex text-xl xl:text-2xl gap-6 rainbowGlow ">
+          <a
+            href="https://www.linkedin.com/in/alex-pawlonski/"
+            target="_blanck"
+            className="flex items-center cursor-pointer gap-2 boxShadowRainbowLinkHover transform hover:scale-105 transition-all"
+          >
+            <FontAwesomeIcon icon={faLinkedin} />
+            <p>Linkedin</p>
+          </a>
+
+          <a
+            href="https://github.com/AlexPawlonski"
+            target="_blanck"
+            className="flex items-center cursor-pointer gap-2 boxShadowRainbowLinkHover transform hover:scale-105 transition-all"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+            <p>GitHub</p>
+          </a>
+        </div>
       </div>
     </header>
   );
