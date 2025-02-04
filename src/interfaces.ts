@@ -3,7 +3,7 @@ import { StaticImageData } from "next/image";
 export interface Project {
   id: number;
   name: string;
-  description: string[];
+  desc: JSX.Element;
   icon: StaticImageData;
   title: string;
   picture: Picture[];
@@ -46,6 +46,6 @@ export interface Work {
     time: string;
   };
   location: string;
-  desc: string[];
+  desc: JSX.Element;
   skills: string[];
 }

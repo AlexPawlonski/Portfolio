@@ -64,11 +64,7 @@ export default function ProjectComponent({
         </div>
         <div className="relative flex-1 lg:flex overflow-hidden">
           <div className="flex flex-col gap-4 lg:w-[60%] h-[60%] lg:h-full overflow-y-scroll pr-4">
-            {project.description.map((text, key) => (
-              <p key={key} className=" xl:text-3xl">
-                {text}
-              </p>
-            ))}
+            {project.desc}
           </div>
           <div className="grid grid-cols-2 overflow-y-scroll pr-3 lg:w-[40%] h-[40%] lg:h-full">
             {project.picture.map((picture, key) => (

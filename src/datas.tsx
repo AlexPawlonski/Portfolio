@@ -26,22 +26,49 @@ import {
   settingNeohelper,
 } from "@public/img/neohelper";
 
-import { neomanisImg, codingWebImg, ceffinImg } from "@public/img/work";
+import {
+  neomanisImg,
+  codingWebImg,
+  ceffinImg,
+  quizArenaImg,
+} from "@public/img/work";
 
 export const projects: Project[] = [
   {
     id: 0,
     name: "Build-lol.com",
-    description: [
-      "Développement en indépendent du site web Build-lol.com basée sur l'api de Riot games",
-      "Qui permettra à ses utilisateurs de visualiser les statistiques de leur personnage (League of Legend) en fonction de leur équipement d'un simple glisser déposer.",
-      "",
-      "Le site se présente comme une web app qui reprend la DA de League of Legend, en l'adaptant pour un format mobile ou PC.",
-      "Les informations présentes sur la plateforme sont directement tirées de l'API de Rio de games, ce qui fait que toutes les informations sont instantanément mise à jour si jamais une update est déployée sur le jeu original.",
-      "C'est d'ailleurs un des défis principaux car l'interface doit s'adapter à tous les changements d'information qui pourraient advenir dans le futur.",
-      "En plus des fonctionnalités principales de sélection et de construction de l'équipement de son personnage,  le site est entièrement dynamique en termes de langage utilisateur mais aussi de version de League of Legend.",
-      "Grâce au sélecteur présent dans le header ou le menu, vous avez la possibilité de changer la langue et de sélectionner la version du jeu parmi les 14 dernières saisons. ",
-    ],
+    desc: (
+      <div>
+        <h2>
+          QuizArena Cloud est une plateforme SaaS destinée au lancement
+          automatique de sessions de jeux, principalement pour les utilisateurs
+          RH.
+        </h2>
+        <div>
+          <h3>Mes contributions :</h3>
+          <ul>
+            <li>Intégration de pages et de composants React.</li>
+            <li>Optimisation de l’application avec Next.js.</li>
+            <li>
+              Développement de fonctionnalités complexes : drag & drop,
+              formulaires interactifs, scripts d&apos;importation de
+              traductions.
+            </li>
+            <li>Réalisation de maquettes UX/UI avec figma.</li>
+            <li>Création de bases de données avec Drizzle.</li>
+            <li>
+              Gestion de sessions utilisateurs et authentification via NextAuth
+              et Cognito.
+            </li>
+            <li>
+              Développement de scripts pour automatiser la mise à jour des
+              traductions depuis Google Sheets
+            </li>
+          </ul>
+        </div>
+      </div>
+    ),
+
     icon: iconBuildLol,
     title: "Build-lol.com",
     picture: [
@@ -98,19 +125,7 @@ export const projects: Project[] = [
   {
     id: 1,
     name: "NeoServeur",
-    description: [
-      "NeoServeur c’est  le côté dédié au technicien de l'écosystème Neomanis.",
-      " ",
-      "Il est composé d'une multitude d'écran permettant à ces derniers de faire: ",
-      "Me la gestion de ticket grâce à un système d'inventaire et de backlog entièrement dynamique.",
-      "D'un système de chat instantané entre tous les utilisateurs.",
-      "D'un écran pour visualiser les différents diagnostics effectués sur les PC des clients.",
-      "D'un éditeur de script pour pouvoir personnaliser ou créer des livres qui résoudront des problèmes automatiquement chez les clients.",
-      "Ou encore d'une partie blog qui permet au technicien de poser des questions facilitant le partage d'information.",
-      "Mon rôle sur Neo serveur a été majoritairement de participer à l'intégration de L’ux / ui désigné par un tiers, au sein de l'équipe neomanis.",
-      "Si je devais citer un défi technique qui m'a marqué,  je dirais que c'est la création du système d'inventaire en drag and drop qui se génère automatiquement en fonction du nombre d'hexagone souhaité.",
-      "Note:  NeoServeur est une plateforme destinée à des clients du coup il n'existe pas de version publique accessible.",
-    ],
+    desc: <div></div>,
     icon: iconNeomanis,
     title: "Neomanis (NeoServeur)",
     picture: [
@@ -180,12 +195,7 @@ export const projects: Project[] = [
   {
     id: 2,
     name: "NeoHelper",
-    description: [
-      "NeoHelper et l'application côté client de l'écosystème Neomanis,  il s'agit d'un agent de diagnostic permettant de réaliser des actions sur le PC de l'utilisateur mais aussi de faire des prises en main à distance ou encore de faciliter la discussion avec l'utilisateur grâce à un assistant virtuel.",
-      "Il se présente sous un format mobile et peut être installé sur Windows et Linux, il s'agit à la base d'une application React JS qui utilise l'outil tauri JS pour pouvoir communiquer avec l'OS de la machine et rendre l'application compatible. ",
-      "En plus des fonctionnalités de chat et de gestion des problèmes en cours mis à disposition à l'utilisateur il y a aussi un système de notification et de contrôle de son compte directement intégré à l'application.  Pour que les utilisateurs puissent personnaliser leur avatar ou encore changer la langue de leur application ",
-      "Note: NeoHelper est une plateforme destinée à des clients du coup il n'existe pas de version publique accessible.",
-    ],
+    desc: <div></div>,
     icon: iconNeomanis,
     title: "Neomanis (NeoHelper)",
     picture: [
@@ -223,6 +233,7 @@ export const projects: Project[] = [
     },
   },
 ];
+
 export const skills: ISkills = {
   front: [
     { title: "React JS", level: 5, fav: true },
@@ -265,6 +276,59 @@ export const skills: ISkills = {
 
 export const works: Work[] = [
   {
+    title: "Développeur Full-Stack",
+    company: "QuizArena",
+    type: "CDI",
+    img: quizArenaImg,
+    linkWork: "https://www.linkedin.com/company/neomanis/",
+    date: {
+      start: "Juillet 2021",
+      end: "Juin 2023",
+      time: "2 ans",
+    },
+    location: "Angers, Pays de la Loire, France (Full remote)",
+    desc: (
+      <div>
+        <h2 className="text-xl text-blueReact">
+          QuizArena Cloud est une plateforme SaaS destinée au lancement
+          automatique de sessions de jeux, principalement pour les utilisateurs
+          RH.
+        </h2>
+        <div>
+          <h3 className="my-3 text-lg text-redReact">Mes contributions :</h3>
+          <ul className="list-disc flex flex-col gap-2">
+            <li>Intégration de pages et de composants React.</li>
+            <li>Optimisation de l’application avec Next.js.</li>
+            <li>
+              Développement de fonctionnalités complexes : drag & drop,
+              formulaires interactifs, scripts d&apos;importation de
+              traductions.
+            </li>
+            <li>Réalisation de maquettes UX/UI avec figma.</li>
+            <li>Création de bases de données avec Drizzle.</li>
+            <li>
+              Gestion de sessions utilisateurs et authentification via NextAuth
+              et Cognito.
+            </li>
+            <li>
+              Développement de scripts pour automatiser la mise à jour des
+              traductions depuis Google Sheets
+            </li>
+          </ul>
+        </div>
+      </div>
+    ),
+    skills: [
+      "React JS",
+      "TypeScript",
+      "Node JS",
+      "Tailwind css",
+      "Storybook",
+      "Tauri JS",
+      "Expresse JS",
+    ],
+  },
+  {
     title: "Développeur Front-end",
     company: "Neomanis",
     type: "CDI",
@@ -276,12 +340,7 @@ export const works: Work[] = [
       time: "2 ans",
     },
     location: "Angers, Pays de la Loire, France (Full remote)",
-    desc: [
-      "Poste de développeur Front-end travaillant sur le développement d’une application en Microservices.",
-      "Au sein d’une équipe utilisant la méthode Agile et en 100 % télétravail.",
-      "J’ai pu me perfectionner sur des technologies telles que TypeScript ou React.",
-      "Mais aussi relever des défis techniques demandant de solides compétences en développement UX/UI et intégration CSS.",
-    ],
+    desc: <div></div>,
     skills: [
       "React JS",
       "TypeScript",
@@ -304,15 +363,7 @@ export const works: Work[] = [
       time: "2 mois",
     },
     location: "Beaucouzé, Pays de la Loire, France (Hybride remote)",
-    desc: [
-      "J'ai réalisé un stage de fin d'études dans l'entreprise CodingWeb durée de 2 mois, dans lequel j'ai travaillé sur deux projets :",
-      "",
-      "- Un projet nommé BluEx, qui consistait à mettre à jour technologiquement une plate-forme destinée à des professionnels pour gérer des événements ou des salons. J'ai donc travaillé sur un environnement utilisant le framework Meteor JS, dans lequel je devais insérer des composants React pour convertir progressivement les différentes parties de la plate-forme.",
-      " ",
-      "- L'autre projet sur lequel j'ai travaillé durant mon stage et qui m'a donné la maîtrise de la bibliothèque Tailwind css, a été sur la mise à jour visuelle du site Meethem.fr.",
-      "",
-      "Dans lequel je devais d'abord mettre à jour le framework Meteor JS de sa version datant de 2015 la dernière version sortie en 2020. Une fois la mise à jour effectuée, j'ai eu mission de remplacer l'intégralité de la mise en page et des styles géré par Bootstrap par une version plus moderne et plus optimiser utilisant Tailwind css.",
-    ],
+    desc: <div></div>,
     skills: [
       "React JS",
       "JavaScript",
@@ -338,20 +389,13 @@ export const schools: Work[] = [
       time: "8 mois",
     },
     location: "Angers, Pays de la Loire, France",
-    desc: [
-      "Durant ma formation, j'ai eu l'occasion d'explorer divers aspects du métier de développeur.",
-      "",
-      "Dans un premier temps, j'ai travaillé avec PHP, SQL et WordPress, tout en participant à différents projets utilisant ces technologies.",
-      "De plus, je me suis également impliqué dans plusieurs projets en JavaScript, notamment sur des sites vitrines et un projet en Angular.",
-      "Mais aussi, j'ai eu l'opportunité de contribuer à un projet d'application mobile avec Android Studio, principalement en me concentrant sur l'intégration des interfaces et le design de l'application.",
-      "",
-      "Ces expériences m'ont permis d'approfondir mes connaissances dans le domaine du développement Web et d'acquérir les compétences essentielles pour travailler en équipe ou prendre en charge la direction d'un projet.",
-    ],
+    desc: <div></div>,
     skills: [
       "React JS",
       "Angular JS",
       "JavaScript",
-      "HTML / CSS",
+      "HTML",
+      "CSS",
       "PHP",
       "Wordpresse",
       "MySQL",

@@ -24,7 +24,6 @@ export default function Layout({ children }: Props) {
             <Nav isFixed={true} />
             <p className="text-center text-base">{`</nav>`}</p>
           </div>
-
           <div>
             <p>Alex pawlonski</p>
             <p>Copyright (c) 2025</p>

@@ -41,8 +41,8 @@ export default function Home() {
         <MenuFixed />
         <div className="w-full mt-4 flex flex-col gap-10">
           <Projects />
-          <Skills />
           <Work />
+          <Skills />
         </div>
       </div>
       <Contact />
