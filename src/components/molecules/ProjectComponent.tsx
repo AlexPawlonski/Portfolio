@@ -18,12 +18,7 @@ export default function ProjectComponent({
 }: Props) {
   if (imgSelected) {
     return (
-      <article
-        className={classNames(
-          "flex w-full gap-4 lg:gap-6 bg-drakBlue bg-opacity-40 rounded-xl p-5 flex-1 relative overflow-hidden lg:flex-row flex-col items-center",
-          !imgSelected.isMobile && ""
-        )}
-      >
+      <article className="bg-drakBlue/65 bg-opacity-40 relative flex w-full flex-1 flex-col items-center gap-4 overflow-hidden rounded-xl p-5 lg:flex-row lg:gap-6">
         <Image
           src={imgSelected.img.src}
           alt={`${imgSelected.title}-Icon`}
@@ -31,11 +26,11 @@ export default function ProjectComponent({
           height={720}
           className={classNames(
             "rounded-lg",
-            imgSelected.isMobile ? "w-fit" : "aspect-video"
+            imgSelected.isMobile ? "w-fit" : "aspect-video",
           )}
         />
         <div className={classNames(!imgSelected.isMobile && "w-full")}>
-          <h2 className="text-2xl lg:text-4xl xl:text-6xl mb-4">
+          <h2 className="mb-4 text-2xl lg:text-4xl xl:text-6xl">
             {imgSelected.title}
           </h2>
           <p className="lg:text-2xl xl:text-4xl">{imgSelected.desc}</p>
@@ -44,9 +39,9 @@ export default function ProjectComponent({
     );
   } else {
     return (
-      <article className="bg-drakBlue bg-opacity-40 rounded-xl p-5 relative flex-1 flex flex-col overflow-hidden gap-6">
-        <div className="flex flex-col lg:flex-row lg:justify-between justify-around text-blueReact gap-2 lg:items-center">
-          <h2 className="text-3xl xl:text-5xl lg:text-3xl">{`<${project.name}/>`}</h2>
+      <article className="bg-drakBlue/65 bg-opacity-40 relative flex flex-1 flex-col gap-6 overflow-hidden rounded-xl p-5">
+        <div className="text-blueReact flex flex-col justify-around gap-2 lg:flex-row lg:items-center lg:justify-between">
+          <h2 className="text-3xl lg:text-3xl xl:text-5xl">{`<${project.name}/>`}</h2>
           <div className="flex items-start gap-6">
             {project.link.git && (
               <ButtonLink
@@ -62,11 +57,11 @@ export default function ProjectComponent({
             />
           </div>
         </div>
-        <div className="relative flex-1 lg:flex overflow-hidden">
-          <div className="flex flex-col gap-4 lg:w-[60%] h-[60%] lg:h-full overflow-y-scroll pr-4">
+        <div className="relative flex-1 overflow-hidden lg:flex">
+          <div className="flex h-[60%] flex-col gap-4 overflow-y-scroll pr-4 lg:h-full lg:w-[60%]">
             {project.desc}
           </div>
-          <div className="grid grid-cols-2 overflow-y-scroll pr-3 lg:w-[40%] h-[40%] lg:h-full">
+          <div className="grid h-[40%] grid-cols-2 overflow-y-scroll pr-3 lg:h-full lg:w-[40%]">
             {project.picture.map((picture, key) => (
               <ImgItem
                 key={key}
@@ -76,7 +71,7 @@ export default function ProjectComponent({
             ))}
           </div>
         </div>
-        <div className="flex justify-start flex-wrap gap-x-4 text-xl lg:mt-auto textAnnimColor xl:text-3xl">
+        <div className="textAnnimColor flex flex-wrap justify-start gap-x-4 text-xl lg:mt-auto xl:text-3xl">
           {project.skills.map((skill, key) => (
             <h3 key={key} className="min-w-max">{`</${skill}>`}</h3>
           ))}

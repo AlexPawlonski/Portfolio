@@ -17,12 +17,12 @@ export default function SkillSection({
   icon,
 }: Props) {
   return (
-    <div className="bg-drakBlue rounded-xl lg:px-6 px-4 py-4 bg-opacity-40">
-      <h3 className="text-xl mb-4 lg:text-3xl">
+    <div className="bg-drakBlue/65 bg-opacity-40 rounded-xl px-4 py-4 lg:px-6">
+      <h3 className="text-blueReact textShadowsBlue mb-4 text-xl lg:text-3xl">
         {title}
         <FontAwesomeIcon icon={icon} className="ml-4" />
       </h3>
-      <ul className="flex gap-2 lg:gap-4 flex-wrap">
+      <ul className="flex flex-wrap gap-2 lg:gap-4">
         {skillArray.map((skill, key) => (
           <SkillItem key={key} skill={skill} />
         ))}

@@ -8,7 +8,7 @@ interface Props {
 
 export default function SkillItem({ skill }: Props) {
   return (
-    <li className="flex gap-2 items-center bg-drakBlue w-fit px-4 py-2 rounded-full">
+    <li className="flex gap-2 items-center bg-drakBlue/65 w-fit px-4 py-2 rounded-full">
       <h3 className="text-lg lg:text-2xl">{skill.title}</h3>
       {skill.fav && (
         <FontAwesomeIcon icon={starSolid} className="rainbowGlow" />

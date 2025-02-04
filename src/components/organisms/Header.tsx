@@ -8,7 +8,7 @@ interface Props {
 }
 export default function Header({ isFixed }: Props) {
   return (
-    <header className="rounded-xl w-full p-4 rainbowGlow boxShadowRainbow bg-drakBlue">
+    <header className="rounded-xl w-full p-4 rainbowGlow boxShadowRainbow bg-drakBlue/65">
       <p className="text-end lg:text-xl text-white">
         {!isFixed ? `</header>` : `</memo>`}
       </p>

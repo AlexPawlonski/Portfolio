@@ -11,9 +11,9 @@ export function UpdateAlert() {
   return (
     <div className="fixed h-screen w-screen top-0 left-0 z-10 flex items-center justify-center">
       {/* Background */}
-      <div className="h-full w-full absolute bg-drakBlue opacity-45 top-0 left-0 z-0 boxShadowRainbow"></div>
+      <div className="h-full w-full absolute bg-drakBlue/65 opacity-45 top-0 left-0 z-0 boxShadowRainbow"></div>
       {/* PopUp */}
-      <div className="bg-drakBlue rounded-md p-6 sm:w-1/2 z-20 flex flex-col gap-2 w-full mx-8">
+      <div className="bg-drakBlue/65 rounded-md p-6 sm:w-1/2 z-20 flex flex-col gap-2 w-full mx-8">
         <h1 className="sm:text-3xl mb-4 text-blueReact textShadowsBlue text-xl">
           Attention, une nouvelle version de mon portfolio est en cours de
           développement !

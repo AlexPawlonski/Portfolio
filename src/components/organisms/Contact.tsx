@@ -6,17 +6,17 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="h-screen w-full flex items-center justify-center"
+      className="flex h-screen w-full items-center justify-center"
     >
       <div className="flex flex-col gap-10">
         <div className="flex items-center gap-10">
-          <h3 className="text-4xl lg:text-6xl">
+          <h3 className="text-blueReact textShadowsBlue text-4xl lg:text-6xl">
             On se call ?
           </h3>
-          <div className="lg:flex items-center gap-10 rainbowGlow">
+          <div className="rainbowGlow items-center gap-10 lg:flex">
             <a
               href="mailto:apawlonski8@gmail.com"
-              className="flex gap-4 items-center boxShadowRainbowLinkHover relative"
+              className="boxShadowRainbowLinkHover relative flex items-center gap-4"
             >
               <FontAwesomeIcon
                 icon={faEnvelope}
@@ -27,7 +27,7 @@ export default function Contact() {
             <a
               href="https://www.linkedin.com/in/alex-pawlonski/"
               target="_blanck"
-              className="flex gap-4 items-center boxShadowRainbowLinkHover relative"
+              className="boxShadowRainbowLinkHover relative flex items-center gap-4"
             >
               <FontAwesomeIcon
                 icon={faLinkedin}
@@ -37,10 +37,9 @@ export default function Contact() {
             </a>
           </div>
         </div>
-        <h3 className="text-sm lg:text-2xl">
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-          Si vous voulez plus d'informations ou travailler avec moi n'hésitez
-          pas à me contacter :D
+        <h3 className="text-redReact text-sm lg:text-2xl">
+          Si vous voulez plus d&apos;informations ou travailler avec moi
+          n&apos;hésitez pas à me contacter :D
         </h3>
       </div>
     </div>

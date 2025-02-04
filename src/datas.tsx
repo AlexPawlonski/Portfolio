@@ -7,6 +7,7 @@ import {
   settingMobile,
   stateMobile,
 } from "@public/img/buildlol";
+
 import {
   blogdetail,
   bookedite,
@@ -31,6 +32,8 @@ import {
   codingWebImg,
   ceffinImg,
   quizArenaImg,
+  AstraIcon,
+  BlaisePascal,
 } from "@public/img/work";
 
 export const projects: Project[] = [
@@ -238,38 +241,35 @@ export const skills: ISkills = {
   front: [
     { title: "React JS", level: 5, fav: true },
     { title: "Next JS", level: 3, fav: true },
-    { title: "TypeScript / JavaScript", level: 4, fav: true },
-    { title: "HTML / CSS", level: 5, fav: true },
-    { title: "Sass", level: 1, fav: false },
+    { title: "TypeScript", level: 4, fav: true },
+    { title: "JavaScript", level: 4, fav: false },
+    { title: "HTML", level: 5, fav: false },
+    { title: "CSS", level: 5, fav: false },
     { title: "Tailwind CSS", level: 5, fav: true },
-    { title: "Bootstrap", level: 3, fav: false },
     { title: "Emotion", level: 1, fav: false },
-    { title: "Axios", level: 4, fav: false },
-    { title: "React Query", level: 3, fav: false },
-    { title: "React Hook Form", level: 4, fav: false },
-    { title: "React Chart", level: 2, fav: false },
-    { title: "React D&D", level: 3, fav: false },
   ],
   back: [
     { title: "Node JS", level: 5, fav: true },
-    { title: "Mongo DB", level: 1, fav: false },
-    { title: "FireBase", level: 2, fav: true },
-    { title: "Expresse JS", level: 1, fav: false },
-    { title: "Nest JS", level: 1, fav: false },
+    { title: "Prisma", level: 5, fav: false },
+    { title: "Drizzle", level: 5, fav: true },
+    { title: "SQL", level: 5, fav: false },
+    { title: "PHP", level: 5, fav: false },
   ],
   server: [
     { title: "Ngnix", level: 2, fav: false },
     { title: "Jenkins", level: 1, fav: false },
+    { title: "Hostiger", level: 1, fav: false },
+    { title: "Ubuntu server", level: 1, fav: false },
   ],
   test: [
     { title: "Jest", level: 2, fav: false },
     { title: "Playwright", level: 2, fav: false },
   ],
   tools: [
-    { title: "Agile", level: 5, fav: false },
     { title: "Storybook", level: 3, fav: true },
-    { title: "GitHub", level: 3, fav: false },
     { title: "Figma", level: 3, fav: true },
+    { title: "Notion", level: 3, fav: true },
+    { title: "GitHub", level: 3, fav: false },
     { title: "Photoshop", level: 3, fav: false },
   ],
 };
@@ -280,35 +280,48 @@ export const works: Work[] = [
     company: "QuizArena",
     type: "CDI",
     img: quizArenaImg,
-    linkWork: "https://www.linkedin.com/company/neomanis/",
+    linkWork: "https://quizarena.com/en/",
     date: {
-      start: "Juillet 2021",
-      end: "Juin 2023",
-      time: "2 ans",
+      start: "Mai 2024",
+      end: "Févier 2025",
+      time: "10 mois",
     },
-    location: "Angers, Pays de la Loire, France (Full remote)",
+    location: "Biarritz, Nouvelle-Aquitaine, France (Full remote à Redon)",
     desc: (
       <div>
-        <h2 className="text-xl text-blueReact">
+        <h2 className="text-blueReactueReact text-xl">
           QuizArena Cloud est une plateforme SaaS destinée au lancement
           automatique de sessions de jeux, principalement pour les utilisateurs
           RH.
         </h2>
         <div>
-          <h3 className="my-3 text-lg text-redReact">Mes contributions :</h3>
-          <ul className="list-disc flex flex-col gap-2">
-            <li>Intégration de pages et de composants React.</li>
-            <li>Optimisation de l’application avec Next.js.</li>
+          <h3 className="text-blueReact my-3 text-lg">Mes contributions :</h3>
+          <ul className="flex list-inside list-disc flex-col gap-1">
+            <li>
+              Intégration de pages et de composants
+              <span className="textAnnimColor"> React</span>.
+            </li>
+            <li>
+              Optimisation de l’application avec
+              <span className="textAnnimColor"> Next.js</span>.
+            </li>
             <li>
               Développement de fonctionnalités complexes : drag & drop,
               formulaires interactifs, scripts d&apos;importation de
               traductions.
             </li>
-            <li>Réalisation de maquettes UX/UI avec figma.</li>
-            <li>Création de bases de données avec Drizzle.</li>
             <li>
-              Gestion de sessions utilisateurs et authentification via NextAuth
-              et Cognito.
+              Réalisation de maquettes UX/UI avec
+              <span className="textAnnimColor"> Figma</span>.
+            </li>
+            <li>
+              Création de bases de données avec
+              <span className="textAnnimColor"> Drizzle</span>.
+            </li>
+            <li>
+              Gestion de sessions utilisateurs et authentification via
+              <span className="textAnnimColor"> NextAuth </span>
+              et <span className="textAnnimColor"> Cognito</span>.
             </li>
             <li>
               Développement de scripts pour automatiser la mise à jour des
@@ -319,13 +332,96 @@ export const works: Work[] = [
       </div>
     ),
     skills: [
+      "Next JS",
       "React JS",
+      "Tailwind css",
       "TypeScript",
       "Node JS",
+      "Amazon web services",
+      "Figma",
+      "Drizzle ORM",
+      "sst",
+      "NextAuth",
+    ],
+  },
+
+  {
+    title: "Développeur Full-Stack",
+    company: "AlexPawlonski",
+    type: "Auto-formation",
+    img: AstraIcon,
+    linkWork: "https://github.com/AlexPawlonski",
+    date: {
+      start: "Septembre 2023",
+      end: "Mai 2024",
+      time: "9 mois",
+    },
+    location: "Redon, ille et vilaine, France",
+    desc: (
+      <div>
+        <h2 className="text-blueReactueReact text-xl">
+          Création de projets en indépendant, Auto-formation
+          <span className="textAnnimColor"> Next JS</span>,
+          <span className="textAnnimColor"> DevOps</span>.
+        </h2>
+        <div>
+          <h3 className="text-blueReact mt-3 text-lg">Build-lol.com :</h3>
+          <h4 className="text-redReact mb-3 text-lg">
+            Saas création de build pour le jeu League of Legends.
+          </h4>
+          <ul className="flex list-inside list-disc flex-col gap-1">
+            <li>
+              Développement de fonctionnalités et d&apos;interfaces avec
+              Next.js.
+            </li>
+            <li>
+              Mise en place d&apos;une base de données utilisateurs MySQL en
+              utilisant Prisma ORM.
+            </li>
+            <li>
+              Implémentation d&apos;un système d&apos;authentification avec
+              NextAuth.
+            </li>
+            <li>Optimisation du site pour la performance et le SEO.</li>
+            <li>
+              Réalisation de maquettes Figma et création d&apos;assets avec
+              Photoshop.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-blueReact mt-3 text-lg">Serveur VPS public :</h3>
+          <h4 className="text-redReact mb-3 text-lg">
+            Pour répondre aux besoins d&apos;hébergement de mes différents
+            projets, j&apos;ai configuré un serveur Ubuntu from scratch.
+          </h4>
+        </div>
+        <ul className="flex list-inside list-disc flex-col gap-1">
+          <li>
+            Configuration de Nginx et de proxy avec mise en place de certificats
+            HTTPS.
+          </li>
+          <li>Configuration d&apos;un nom de domaine.</li>
+          <li>
+            Installation de Jenkins pour automatiser les déploiements avec
+            GitHub.
+          </li>
+        </ul>
+      </div>
+    ),
+    skills: [
+      "Next JS",
+      "React JS",
       "Tailwind css",
-      "Storybook",
-      "Tauri JS",
-      "Expresse JS",
+      "TypeScript",
+      "Node JS",
+      "Ubuntu server",
+      "Figma",
+      "Prisma ORM",
+      "Jenkins",
+      "Nginx",
+      "Notion",
+      "Api REST",
     ],
   },
   {
@@ -340,7 +436,97 @@ export const works: Work[] = [
       time: "2 ans",
     },
     location: "Angers, Pays de la Loire, France (Full remote)",
-    desc: <div></div>,
+    desc: (
+      <div>
+        <h2 className="text-xl">
+          Travaillant dans l’équipe Front-end, en collaboration avec l’équipe
+          Back-end, dans un environnement ultra-dynamique utilisant la méthode
+          agile, j’ai eu l’opportunité de contribuer à plusieurs
+          <span className="textAnnimColor"> projets innovants</span>.
+        </h2>
+        <h3 className="text-blueReact mt-3 text-xl">NeoServer :</h3>
+        <h4 className="text-redReact mb-3 text-lg">
+          Web app fournie aux techniciens des entreprises utilisant la solution.
+        </h4>
+        <ul className="flex list-inside list-disc flex-col gap-1">
+          <li>
+            Réalisation d’une page complexe répondant aux problématiques
+            d’ergonomie utilisateur et de responsivité.
+          </li>
+          <li>
+            Mise en place des routes API entre les microservices Back-end
+            <span className="textAnnimColor"> Express.js</span> et les
+            applications Front (NeoHelper, NeoServer).
+          </li>
+          <li>
+            Intégration de tests fonctionnels avec
+            <span className="textAnnimColor"> Jest</span>.
+          </li>
+          <li>
+            Création de maquettes pour des pages et des nouvelles
+            fonctionnalités avec <span className="textAnnimColor"> Figma</span>.
+          </li>
+          <li>
+            Implémentation de
+            <span className="textAnnimColor"> WebSockets</span> pour gérer les
+            notifications en temps réel envoyées par des microservices.
+          </li>
+        </ul>
+
+        <h3 className="text-blueReact mt-3 text-xl">NeoHelper :</h3>
+        <h4 className="text-redReact mb-3 text-lg">
+          Logiciel Windows installé directement chez les clients des entreprises
+          pour faciliter les échanges entre techniciens et utilisateurs.
+        </h4>
+        <ul className="flex list-inside list-disc flex-col gap-1">
+          <li>
+            Développement d’interfaces adaptées au format mobile avec gestion du
+            redimensionnement des fenêtres Windows.
+          </li>
+          <li>
+            Communication entre Windows et l’application NeoHelper pour exécuter
+            des diagnostics sur le poste utilisateur via
+            <span className="textAnnimColor"> Tauri.js</span>.
+          </li>
+          <li>
+            Création d’un chat en
+            <span className="textAnnimColor"> WebSocket</span> pour la
+            communication en temps réel entre utilisateurs et techniciens.
+          </li>
+        </ul>
+        <h3 className="text-blueReact my-3 text-xl">Librairie Storybook :</h3>
+        <ul className="flex list-inside list-disc flex-col gap-1">
+          <li>
+            Installation et personnalisation d’un environnement
+            <span className="textAnnimColor"> Storybook</span>.
+          </li>
+          <li>
+            Développement de composants complexes :
+            <span className="text-redReact">
+              {" "}
+              Drag & Drop, composants récursifs, inventaire de tickets
+              interactif
+            </span>
+            .
+          </li>
+          <li>
+            Création de composants{" "}
+            <span className="textAnnimColor"> React.js</span> réutilisables sur
+            plusieurs applications.
+          </li>
+          <li>Mise en place de tests d’intégration.</li>
+        </ul>
+        <h3 className="text-blueReact my-3 text-xl">
+          Création d’un module Node.js :
+        </h3>
+        <ul className="flex list-inside list-disc flex-col gap-1">
+          <li>
+            Développement d’un module pour centraliser et gérer les traductions
+            de tous les projets Front-end.
+          </li>
+        </ul>
+      </div>
+    ),
     skills: [
       "React JS",
       "TypeScript",
@@ -363,15 +549,67 @@ export const works: Work[] = [
       time: "2 mois",
     },
     location: "Beaucouzé, Pays de la Loire, France (Hybride remote)",
-    desc: <div></div>,
+    desc: (
+      <div>
+        <h2 className="text-xl">
+          J’ai travaillé sur deux projets en m’intégrant aux sprints
+          <span className="textAnnimColor"> Agile</span> des équipes de
+          l&apos;entreprise.
+        </h2>
+        <h3 className="text-blueReact mt-3 text-xl">BlueX :</h3>
+        <h4 className="text-redReact mb-3 text-lg">
+          Projet de plateforme de gestion d’événements pour un client américain,
+          <span className="text-blueReact"> Shepard</span>, incluant une
+          marketplace.
+        </h4>
+        <ul className="flex list-inside list-disc flex-col gap-1">
+          <li>
+            Développement de nouvelles fonctionnalités pour la marketplace en
+            <span className="textAnnimColor"> React.js</span>.
+          </li>
+          <li>
+            Réduction de la dette technique de la plateforme en recréant des
+            pages <span className="textAnnimColor"> Meteor.js</span> en
+            <span className="textAnnimColor"> React.js</span>, avec une mise à
+            jour visuelle en utilisant
+            <span className="textAnnimColor"> Bootstrap</span>.
+          </li>
+          <li>
+            Mise en place des communications
+            <span className="textAnnimColor"> API</span> entre le Front-end et
+            le Back-end.
+          </li>
+        </ul>
+        <h3 className="text-blueReact mt-3 text-xl">Meethem.fr :</h3>
+        <h4 className="text-redReact mb-3 text-lg">
+          Projet d’organisation d’événements entre amis avec un système
+          d’invitations et d’agenda.
+        </h4>
+        <ul className="flex list-inside list-disc flex-col gap-1">
+          <li>
+            Refonte complète de l’interface
+            <span className="textAnnimColor"> UX/UI</span> du site, en passant
+            de
+            <span className="textAnnimColor"> Bootstrap</span> à
+            <span className="textAnnimColor"> Tailwind CSS</span>.
+          </li>
+          <li>
+            Mise à jour des packages
+            <span className="textAnnimColor"> Node JS</span> ainsi que du
+            framework <span className="textAnnimColor"> Blaze JS</span>.
+          </li>
+        </ul>
+      </div>
+    ),
     skills: [
       "React JS",
-      "JavaScript",
       "Node JS",
-      "Tailwind css",
+      "JavaScript",
+      "Tailwind CSS",
       "Storybook",
       "Bootstrap",
       "Meteor JS",
+      "Blaze JS",
     ],
   },
 ];
@@ -389,7 +627,32 @@ export const schools: Work[] = [
       time: "8 mois",
     },
     location: "Angers, Pays de la Loire, France",
-    desc: <div></div>,
+    desc: (
+      <div>
+        <h3 className="text-xl mb-3">
+          Durant ma formation, j&apos;ai eu l&apos;occasion d&apos;explorer
+          divers aspects du métier de développeur.
+        </h3>
+        <h3 className="text-blueReact my-3 text-xl">Apprentisage et découverte :</h3>
+        <ul className="flex list-inside list-disc flex-col gap-1">
+          <li>
+            Apprentisage des base du développement web, <span className="textAnnimColor"> HTML</span>, <span className="textAnnimColor"> CSS</span>, <span className="textAnnimColor"> JavaScrip</span>,
+            <span className="textAnnimColor"> PHP</span>, <span className="textAnnimColor"> SQL</span>.
+          </li>
+          <li>
+            Métrise des outils de développement, <span className="textAnnimColor"> VSCode</span>, <span className="textAnnimColor"> Android Studio</span>,
+            <span className="textAnnimColor"> WampServer</span>, <span className="textAnnimColor"> GitHub</span>.
+          </li>
+          <li>Découvert de framework et de CMS comme <span className="textAnnimColor"> Angular</span>, <span className="textAnnimColor"> React</span>, <span className="textAnnimColor"> WordPress</span>.</li>
+          <li>
+            Gestion de projet, Planification des sprint, repartition des tache,
+            gestion des équipe et de leur comunication, présentation aux
+            clients.
+          </li>
+          <li>Réalisation de <span className="textAnnimColor"> MCD/MLD</span> via Merise.</li>
+        </ul>
+      </div>
+    ),
     skills: [
       "React JS",
       "Angular JS",
@@ -397,7 +660,7 @@ export const schools: Work[] = [
       "HTML",
       "CSS",
       "PHP",
-      "Wordpresse",
+      "Wordpress",
       "MySQL",
     ],
   },

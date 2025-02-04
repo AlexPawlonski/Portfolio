@@ -27,7 +27,7 @@ export default function Projects() {
         imgSelected={imgSelected}
       />
       {!projectSelected && (
-        <div className="grid grid-cols-2 lg:grid-rows-6 grid-rows-3 lg:flex lg:flex-wrap flex-1 gap-x-8 lg:gap-x-14 ">
+        <div className="grid grid-cols-2 lg:grid-rows-6 grid-rows-3 lg:flex lg:flex-wrap flex-1 gap-x-8 lg:gap-x-14 bg-drakBlue/65 rounded-xl px-6">
           {projects.map((project, key) => (
             <ProjectItem
               key={key}
