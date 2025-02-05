@@ -1,3 +1,4 @@
+import { ProfilImg } from "@src/components/atoms";
 import { Nav } from "@src/components/organisms";
 import "@styles/index.css";
 import "@styles/index.scss";
@@ -17,10 +18,11 @@ export default function Layout({ children }: Props) {
         />
         <link rel="icon" href="/icon.png" sizes="any" />
       </head>
-      <body className="px-5 lg:px-8 xl:px-10 2xl:max-w-[80%] xl:max-w-full mx-auto relative">
+      <body className="relative mx-auto px-5 lg:px-8 xl:max-w-full xl:px-10 2xl:max-w-[80%]">
         {children}
-        <footer className="text-left lg:text-right pb-4 -mt-16 flex justify-between">
-          <div className=" items-center gap-4 hidden lg:flex">
+        <footer className="-mt-16 flex justify-between pb-4 text-left lg:text-right">
+          <div className="hidden items-center gap-4 lg:flex">
+            <ProfilImg size="w-12" showText={false} isFixed={true} />
             <Nav isFixed={true} />
             <p className="text-center text-base">{`</nav>`}</p>
           </div>
@@ -29,7 +31,7 @@ export default function Layout({ children }: Props) {
             <p>Copyright (c) 2025</p>
           </div>
         </footer>
-        <div className="fixed top-0 inset-0 overflow-hidden">
+        <div className="fixed inset-0 top-0 overflow-hidden">
           <div className="jumbo absolute -inset-[10px] opacity-50"></div>
         </div>
       </body>

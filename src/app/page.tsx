@@ -39,7 +39,7 @@ export default function Home() {
       </section>
       <div className="flex w-full lg:gap-14 lg:mt-10 relative">
         <MenuFixed />
-        <div className="w-full mt-4 flex flex-col gap-10">
+        <div className="w-full mt-4 flex flex-col gap-4">
           <Projects />
           <Work />
           <Skills />

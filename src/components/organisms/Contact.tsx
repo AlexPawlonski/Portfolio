@@ -37,7 +37,7 @@ export default function Contact() {
             </a>
           </div>
         </div>
-        <h3 className="text-redReact text-sm lg:text-2xl">
+        <h3 className="text-sm lg:text-2xl">
           Si vous voulez plus d&apos;informations ou travailler avec moi
           n&apos;hésitez pas à me contacter :D
         </h3>

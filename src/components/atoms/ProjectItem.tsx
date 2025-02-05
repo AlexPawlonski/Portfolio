@@ -8,7 +8,7 @@ interface Props {
 export default function ProjectItem({ project, onClick }: Props) {
   return (
     <div
-      className="flex flex-col group cursor-pointer lg:w-1/4 xl:w-1/6 relative transition-all aspect-square h-fix"
+      className="group relative flex cursor-pointer flex-col transition-all"
       onClick={() => onClick(project)}
     >
       <Image
@@ -16,7 +16,7 @@ export default function ProjectItem({ project, onClick }: Props) {
         alt={`${project.name}-Icon`}
         width={512}
         height={512}
-        className="py-5 group-hover:scale-105 transition-all transform"
+        className="transform py-5 transition-all group-hover:scale-105"
       />
       <h2 className="text-center text-xl">{project.title}</h2>
     </div>

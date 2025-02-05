@@ -1,6 +1,5 @@
 import { skills } from "@src/datas";
 import { SkillSection } from "../molecules";
-import { LevelBar } from "../atoms";
 
 import {
   faPencil,
@@ -12,8 +11,8 @@ import {
 
 export default function Skills() {
   return (
-    <section id="skills" className="gap-4 flex flex-col py-6">
-     <h2 className="text-3xl xl:text-5xl pb-4" >Skills</h2>
+    <section id="skills" className="gap-4 flex flex-col pt-4">
+     <h2 className="text-3xl xl:text-5xl" >Skills</h2>
       <SkillSection
         title="Front-end"
         skillArray={skills.front}

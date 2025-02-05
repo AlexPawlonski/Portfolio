@@ -33,20 +33,28 @@ import {
   ceffinImg,
   quizArenaImg,
   AstraIcon,
-  BlaisePascal,
 } from "@public/img/work";
+import { iconCodingweb } from "@public/img/bluex";
+import { mycollectionLogo } from "@public/img/mycollection";
+import { quizarenaLogo } from "@public/img/quizarena";
 
 export const projects: Project[] = [
   {
     id: 0,
-    name: "Build-lol.com",
+    name: "QuizArena",
     desc: (
       <div>
         <h2>
-          QuizArena Cloud est une plateforme SaaS destinée au lancement
-          automatique de sessions de jeux, principalement pour les utilisateurs
-          RH.
+          QuizArena Cloud est une plateforme SaaS destinée aux entreprises au
+          sein de la solution QuizArena.
         </h2>
+        <p>
+          Elle permet de créer un compte pour accéder au jeu QuizArena,
+          d’organiser des sessions de jeu et de les personnaliser grâce à un
+          système de questions personnalisées. Elle propose également une
+          multitude de paramètres de jeu prédéfinis, tout en offrant une
+          expérience utilisateur fluide et simple.
+        </p>
         <div>
           <h3>Mes contributions :</h3>
           <ul>
@@ -68,6 +76,62 @@ export const projects: Project[] = [
               traductions depuis Google Sheets
             </li>
           </ul>
+        </div>
+      </div>
+    ),
+    icon: quizarenaLogo,
+    title: "QuizArena Cloud",
+    picture: [
+      {
+        title: "Home screen",
+        img: homeNeohelper,
+        isMobile: true,
+        desc: "La ",
+      },
+    ],
+    skills: ["Next JS", "Tailwind CSS", "TypeScript", ""],
+    link: {
+      git: "https://github.com/quizarenalabs",
+      site: "https://quizarena.com/en/",
+    },
+  },
+
+  {
+    id: 1,
+    name: "Build-lol.com",
+    desc: (
+      <div>
+        <h2>
+          Build-lol.com est une plateforme SaaS permettant de créer des builds
+          pour le jeu League of Legends.
+        </h2>
+        <p>
+          Ce projet est mon premier vrai projet utilisant Next.js comme base. Il
+          repose sur la récupération des données des personnages et des objets
+          via l’API de Riot Games. L’application utilise ces données pour
+          afficher les statistiques de combat et permet de les combiner afin de
+          visualiser l’évolution du build en temps réel en fonction du niveau du
+          personnage.
+        </p>
+        <div>
+          <h3>Mes contributions :</h3>
+          <ul>
+            <li>
+              Développement de fonctionnalités et d&apos;interfaces avec Next.js
+            </li>
+            <li>Intégration des pages avec Tailwind CSS.</li>
+            <li>Optimisation du site pour la performance et le SEO.</li>
+            <li>
+              Réalisation de maquettes Figma et création d&apos;assets avec
+              Photoshop.
+            </li>
+          </ul>
+          <p>
+            À terme, le projet devrait également permettre aux utilisateurs de
+            partager leurs builds sur un forum dédié et d&apos;afficher des
+            informations plus détaillées sur les interactions entre objets et
+            champions en situation de combat.
+          </p>
         </div>
       </div>
     ),
@@ -122,15 +186,129 @@ export const projects: Project[] = [
     ],
     link: {
       git: "https://github.com/AlexPawlonski/Build-lol",
-      site: "https://buildlol.alexpawlonski.tech",
+      site: "https://buildlol.alexpawlonski.fr",
     },
   },
   {
-    id: 1,
-    name: "NeoServeur",
-    desc: <div></div>,
+    id: 2,
+    name: "MyCollection",
+    desc: (
+      <div>
+        <h2>
+          MyCollection est une plateforme SaaS permettant aux collectionneurs de
+          gérer et de répertorier chaque item de leur collection.
+        </h2>
+        <p>
+          Ce projet est encore au stade de prototype, mais une grande partie des
+          fonctionnalités sont déjà présentes, notamment la création de comptes
+          et l’enregistrement des objets.
+        </p>
+        <div>
+          <h3>Mes contributions :</h3>
+          <ul>
+            <li>
+              Développement de fonctionnalités et d&apos;interfaces avec Next.js
+            </li>
+            <li>Intégration des pages avec Tailwind CSS.</li>
+            <li>Maquettage des différentes vues de l’application sur Figma.</li>
+            <li>
+              Mise en place de la base de données MySQL, interfacée avec Prisma.
+            </li>
+            <li>
+              Mise en place de l’authentification des utilisateurs via NextAuth
+              avec Google.
+            </li>
+          </ul>
+          <p>
+            À terme, ce projet vise à être utilisable aussi bien sur PC que sur
+            mobile, avec notamment un module IA permettant de reconnaître
+            directement les objets et de faciliter leur intégration.
+          </p>
+        </div>
+      </div>
+    ),
+    icon: mycollectionLogo,
+    title: "MyCollection",
+    picture: [
+      {
+        title: "Home screen",
+        img: homeNeohelper,
+        isMobile: true,
+        desc: "La homepage de NeoHelper ",
+      },
+    ],
+    skills: [
+      "React JS",
+      "API REST",
+      "Node JS",
+      "Tailwind CSS",
+      "TypeScript",
+      "Express JS",
+      "Mongo DB",
+      "Tauri JS",
+    ],
+    link: {
+      site: "https://www.linkedin.com/company/neomanis/",
+    },
+  },
+
+  {
+    id: 3,
+    name: "NeoServer",
+    desc: (
+      <div>
+        <h2>NeoServer est le projet principal de la solution Neomanis.</h2>
+        <p>
+          Il se présente sous la forme d’un panneau de contrôle permettant aux
+          techniciens d’une entreprise de support technique de visualiser une
+          multitude d’informations, telles que les tickets en cours de
+          résolution, les résultats des diagnostics des postes clients ou l’état
+          d’une infrastructure informatique.
+        </p>
+        <p>
+          Il permet également la communication entre les différents acteurs de
+          l’entreprise grâce à un système de chat intégré et une section de
+          questions techniques créées par les techniciens. L’une des principales
+          fonctionnalités du SaaS est la création et la modification de
+          &quot;Livres&quot; : des scripts pouvant être exécutés sur les postes
+          clients via une interface no code en drag & drop.
+        </p>
+        <div>
+          <h3>Mes contributions :</h3>
+          <ul>
+            <li>
+              Réalisation d’une page complexe en tenant compte de l’ergonomie
+              utilisateur et de la responsivité.
+            </li>
+            <li>
+              Mise en place des routes API entre les microservices Back-end
+              Express.js et les applications Front-end (NeoHelper, NeoServer).
+            </li>
+            <li>Maquettage des différentes vues de l’application sur Figma.</li>
+            <li>Intégration de tests fonctionnels avec Jest.</li>
+            <li>
+              Création de maquettes pour les nouvelles pages et fonctionnalités
+              sur Figma.
+            </li>
+            <li>
+              Implémentation de WebSockets pour gérer les notifications en temps
+              réel envoyées par les microservices.
+            </li>
+          </ul>
+          <p>
+            Ce projet partage des composants React avec NeoHelper grâce à une
+            bibliothèque Storybook indépendante.
+          </p>
+          <p>
+            Ce projet a été gelé en 2023 par manque de financement, mais il a
+            atteint le stade commercial avec une version complète et utilisable
+            par une entreprise.
+          </p>
+        </div>
+      </div>
+    ),
     icon: iconNeomanis,
-    title: "Neomanis (NeoServeur)",
+    title: "NeoServeur",
     picture: [
       {
         title: "Home Page",
@@ -196,11 +374,125 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 2,
+    id: 4,
     name: "NeoHelper",
-    desc: <div></div>,
+    desc: (
+      <div>
+        <h2>
+          NeoHelper fait partie de la solution Neomanis et vient en complément
+          du fonctionnement de NeoServer.
+        </h2>
+        <p>
+          NeoHelper se présente sous la forme d’un agent installé directement
+          chez les clients des entreprises afin de faciliter les échanges entre
+          techniciens et utilisateurs.
+        </p>
+        <p>
+          Il permet de signaler directement des problèmes techniques, mais aussi
+          de donner accès au poste utilisateur à NeoBot pour effectuer des
+          actions de maintenance. Il est doté d’une interface de suivi des
+          problèmes signalés ainsi que d’un chat de communication.
+        </p>
+        <div>
+          <h3>Mes contributions :</h3>
+          <ul>
+            <li>
+              Développement d’interfaces adaptées au format mobile avec gestion
+              du redimensionnement des fenêtres Windows.
+            </li>
+            <li>
+              Communication entre Windows et l’application NeoHelper pour
+              exécuter des diagnostics sur le poste utilisateur via Tauri.js.
+            </li>
+            <li>
+              Création d’un chat en WebSocket pour la communication en temps
+              réel entre utilisateurs et techniciens.
+            </li>
+          </ul>
+          <p>
+            Ce projet partage des composants React avec NeoServer grâce à une
+            bibliothèque Storybook indépendante.
+          </p>
+        </div>
+      </div>
+    ),
     icon: iconNeomanis,
-    title: "Neomanis (NeoHelper)",
+    title: "NeoHelper",
+    picture: [
+      {
+        title: "Home screen",
+        img: homeNeohelper,
+        isMobile: true,
+        desc: "La homepage de NeoHelper  se compose de différentes listes de problèmes, trier en fonction de leur statut ( en cours,  en attente, clos). Il y a aussi le bouton besoin d'aide qui est là pour faciliter l'accès au système de chat, dans le cas où l'utilisateur aurait besoin de signaler un problème et démarrer une discussion avec le service de diagnostic.",
+      },
+      {
+        title: "Chat screen",
+        img: chatNeohelper,
+        isMobile: true,
+        desc: "L'écran de discussion se présente sous la forme d'un chat classique, dans lequel est rajouter un système de réponse simplifiée pour gagner du temps lors des demandes. Ce n'est pas visible directement sur le visuel mais il y a aussi un système de glisser déposer pour que l'utilisateur ajoute des pièces jointes à la discussion quand c'est nécessaire.",
+      },
+      {
+        title: "Setting screen",
+        img: settingNeohelper,
+        isMobile: true,
+        desc: "L'écran de setting dispose de toutes les informations concernant l'utilisateur mais aussi lui donne la possibilité de changer certaines d'entre elles",
+      },
+    ],
+    skills: [
+      "React JS",
+      "API REST",
+      "Node JS",
+      "Tailwind CSS",
+      "TypeScript",
+      "Express JS",
+      "Mongo DB",
+      "Tauri JS",
+    ],
+    link: {
+      site: "https://www.linkedin.com/company/neomanis/",
+    },
+  },
+  {
+    id: 5,
+    name: "BluEx",
+    desc: (
+      <div>
+        <h2>
+          BlueX est le principal projet sur lequel j’ai travaillé chez
+          CodingWeb.
+        </h2>
+        <p>
+          Il prend la forme d’une marketplace permettant aux utilisateurs de
+          gérer leur stand lors d’un événement tel qu’un salon d’exposition.
+        </p>
+        <p>
+          La plateforme permet notamment de commander des services liés à
+          l’événement ou du matériel pour le stand. Elle inclut également une
+          fonctionnalité de pré-organisation de la disposition des éléments du
+          stand.
+        </p>
+        <div>
+          <h3>Mes contributions :</h3>
+          <ul>
+            <li>
+              Développement de nouvelles fonctionnalités pour la marketplace en
+              React.js.
+            </li>
+            <li>
+              Réduction de la dette technique de la plateforme en recréant des
+              pages Meteor.js en React.js, avec une mise à jour visuelle en
+              utilisant Bootstrap.
+            </li>
+            <li>
+              Mise en place des communications API entre le Front-end et le
+              Back-end.
+            </li>
+          </ul>
+        </div>
+      </div>
+    ),
+    icon: iconCodingweb,
+    title: "BluEx",
     picture: [
       {
         title: "Home screen",
@@ -629,27 +921,44 @@ export const schools: Work[] = [
     location: "Angers, Pays de la Loire, France",
     desc: (
       <div>
-        <h3 className="text-xl mb-3">
+        <h3 className="mb-3 text-xl">
           Durant ma formation, j&apos;ai eu l&apos;occasion d&apos;explorer
           divers aspects du métier de développeur.
         </h3>
-        <h3 className="text-blueReact my-3 text-xl">Apprentisage et découverte :</h3>
+        <h3 className="text-blueReact my-3 text-xl">
+          Apprentisage et découverte :
+        </h3>
         <ul className="flex list-inside list-disc flex-col gap-1">
           <li>
-            Apprentisage des base du développement web, <span className="textAnnimColor"> HTML</span>, <span className="textAnnimColor"> CSS</span>, <span className="textAnnimColor"> JavaScrip</span>,
-            <span className="textAnnimColor"> PHP</span>, <span className="textAnnimColor"> SQL</span>.
+            Apprentisage des base du développement web,{" "}
+            <span className="textAnnimColor"> HTML</span>,{" "}
+            <span className="textAnnimColor"> CSS</span>,{" "}
+            <span className="textAnnimColor"> JavaScrip</span>,
+            <span className="textAnnimColor"> PHP</span>,{" "}
+            <span className="textAnnimColor"> SQL</span>.
           </li>
           <li>
-            Métrise des outils de développement, <span className="textAnnimColor"> VSCode</span>, <span className="textAnnimColor"> Android Studio</span>,
-            <span className="textAnnimColor"> WampServer</span>, <span className="textAnnimColor"> GitHub</span>.
+            Métrise des outils de développement,{" "}
+            <span className="textAnnimColor"> VSCode</span>,{" "}
+            <span className="textAnnimColor"> Android Studio</span>,
+            <span className="textAnnimColor"> WampServer</span>,{" "}
+            <span className="textAnnimColor"> GitHub</span>.
           </li>
-          <li>Découvert de framework et de CMS comme <span className="textAnnimColor"> Angular</span>, <span className="textAnnimColor"> React</span>, <span className="textAnnimColor"> WordPress</span>.</li>
+          <li>
+            Découvert de framework et de CMS comme{" "}
+            <span className="textAnnimColor"> Angular</span>,{" "}
+            <span className="textAnnimColor"> React</span>,{" "}
+            <span className="textAnnimColor"> WordPress</span>.
+          </li>
           <li>
             Gestion de projet, Planification des sprint, repartition des tache,
             gestion des équipe et de leur comunication, présentation aux
             clients.
           </li>
-          <li>Réalisation de <span className="textAnnimColor"> MCD/MLD</span> via Merise.</li>
+          <li>
+            Réalisation de <span className="textAnnimColor"> MCD/MLD</span> via
+            Merise.
+          </li>
         </ul>
       </div>
     ),
