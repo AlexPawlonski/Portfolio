@@ -42,11 +42,11 @@ export default function Nav({ forceVertical = false, isFixed = false }: Props) {
               id={"projects"}
               icon={<FontAwesomeIcon icon={faDisplay} />}
             />
+            <NavItem id={"work"} icon={<FontAwesomeIcon icon={faSchool} />} />
             <NavItem
               id={"skills"}
               icon={<FontAwesomeIcon icon={faBriefcase} />}
             />
-            <NavItem id={"work"} icon={<FontAwesomeIcon icon={faSchool} />} />
             <NavItem
               id={"contact"}
               icon={<FontAwesomeIcon icon={faPaperPlane} />}
@@ -58,7 +58,7 @@ export default function Nav({ forceVertical = false, isFixed = false }: Props) {
       {forceVertical && (
         <div
           className={classNames(
-            "transform transition-all bg-drakBlue rounded-full h-8 w-8 flex items-center justify-center ",
+            "transform transition-all bg-drakBlue rounded-full h-8 w-8 flex items-center justify-center mb-2",
             !isOpen && "rotate-180"
           )}
           onClick={() => setIsOpen((old) => !old)}

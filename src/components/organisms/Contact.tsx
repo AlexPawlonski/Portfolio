@@ -1,65 +1,62 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowUpRightFromSquare,
+  faEnvelope,
+  faFileDownload,
+} from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import LinkCV from "../atoms/LinkCV";
 
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 export default function Contact() {
   return (
     <div
       id="contact"
-      className="h-[92vh] w-full flex flex-col items-center justify-center text-center gap-6"
+      className="flex h-screen w-full items-center justify-center"
     >
-      <div className="flex flex-col gap-4 lg:gap-8 item-center">
-        <h3 className="text-xl lg:text-2xl">
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-          Merci d'être arrivé jusqu'ici !
-        </h3>
-        <a
-          href="mailto:apawlonski8@gmail.com"
-          className="text-4xl lg:text-6xl border-b-2 max-w-fit textAnnimColor mx-auto hover:scale-105 transition-all textAnnimColor cursor-pointer transform relative boxShadowRainbowMailHover z-20"
-        >
-          On se call ?
-        </a>
-        <h3 className="text-sm lg:text-2xl">
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
-          Si vous voulez plus d'informations ou travailler avec moi n'hésitez
-          pas à me contacter :D
-        </h3>
-      </div>
-      <div className="flex justify-center items-center gap-8 lg:text-2xl">
-        <div className="text-center">
-          <div className="lg:p-4 flex justify-center">
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              className="text-2xl lg:text-4xl textAnnimColor"
-            />
-          </div>
-          <h3 className="text-lg">apawlonski8@gmail.com</h3>
-        </div>
-        <div>
-          <div className="flex gap-6 justify-center">
+      <div className="flex flex-col gap-10">
+        <div className="items-center gap-10 lg:flex">
+          <h3 className="text-blueReact textShadowsBlue text-center text-4xl lg:text-left lg:text-6xl">
+            On se call ?
+          </h3>
+          <div className="rainbowGlow mt-10 flex flex-col gap-4 lg:mt-0 lg:flex-row lg:items-center lg:gap-10">
+            <a
+              href="mailto:apawlonski8@gmail.com"
+              className="boxShadowRainbowLinkHover relative flex items-center gap-4"
+            >
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className="w-10 text-2xl lg:text-4xl"
+              />
+              <h3 className="text-lg">apawlonski8@gmail.com</h3>
+            </a>
             <a
               href="https://www.linkedin.com/in/alex-pawlonski/"
               target="_blanck"
-              className="lg:p-4 flex justify-center textAnnimColor cursor-pointer transform transition-all hover:scale-110 relative boxShadowRainbowHover z-20"
+              className="boxShadowRainbowLinkHover relative flex items-center gap-4"
             >
               <FontAwesomeIcon
                 icon={faLinkedin}
-                className="text-2xl lg:text-4xl"
+                className="w-10 text-2xl lg:text-4xl"
               />
+              <h3 className="text-lg">@AlexPawlonski</h3>
             </a>
-            <a
-              href="https://github.com/AlexPawlonski"
-              target="_blanck"
-              className="lg:p-4 flex justify-center textAnnimColor cursor-pointer transform transition-all hover:scale-110 relative boxShadowRainbowHover z-20"
-            >
-              <FontAwesomeIcon
-                icon={faGithub}
-                className="text-2xl lg:text-4xl "
-              />
-            </a>
+            <LinkCV className="textAnnimColor boxShadowRainbowLinkHover flex transform items-center gap-4">
+              <>
+                <FontAwesomeIcon
+                  icon={faFileDownload}
+                  className="w-10 text-xl lg:text-4xl"
+                />
+                <h3 className="text-lg">Mon VC ici</h3>
+              </>
+            </LinkCV>
           </div>
-          <h3 className="text-lg">@AlexPawlonski</h3>
         </div>
+        <h3 className="text-sm lg:text-2xl">
+          Si vous voulez{" "}
+          <span className="textAnnimColor"> plus d&apos;informations</span> ou
+          <span className="textAnnimColor"> travailler avec moi </span>
+          n&apos;hésitez pas à me contacter :D
+        </h3>
       </div>
     </div>
   );

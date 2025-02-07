@@ -8,7 +8,7 @@ interface Props {
 }
 export default function ImgItem({ img, onClick }: Props) {
   return (
-    <div className="col-span-1 p-2 cursor-pointer" onClick={() => onClick(img)}>
+    <div className="p-2 cursor-pointer w-1/2" onClick={() => onClick(img)}>
       <Image
         src={img.img.src}
         alt={`${img.title}-Icon`}
@@ -20,7 +20,7 @@ export default function ImgItem({ img, onClick }: Props) {
         )}
       />
       {/* add glow effect on hover pc */}
-      <h3 className="text-center">{img.title}</h3>
+      <h3 className="text-center capitalize lg:text-xl xl:text-2xl mt-4">{img.title}</h3>
     </div>
   );
 }

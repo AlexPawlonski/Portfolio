@@ -13,11 +13,11 @@ export default function Projects() {
     <section
       id="projects"
       className={classNames(
-        "flex flex-col gap-2 relative"
+        "relative flex flex-col gap-4 pb-4",
+        projectSelected && "h-screen",
       )}
-      style={{ height: "calc(100vh)" }}
     >
-      <h2 className="text-2xl xl:text-5xl">Réalisation</h2>
+      <h2 className="pt-4 text-3xl xl:text-5xl">Réalisation</h2>
       <ProjectNav
         onClickBack={() => {
           if (imgSelected) {
@@ -31,7 +31,7 @@ export default function Projects() {
         imgSelected={imgSelected}
       />
       {!projectSelected && (
-        <div className="grid grid-cols-2 lg:flex lg:flex-wrap gap-x-14">
+        <div className="bg-drakBlue/65 grid lg:grid-cols-3 grid-cols-2 grid-rows-3 gap-x-8 rounded-xl px-6 pb-6 xl:grid-cols-4 lg:grid-rows-2">
           {projects.map((project, key) => (
             <ProjectItem
               key={key}

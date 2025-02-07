@@ -14,23 +14,17 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 export default function Home() {
   return (
     <main id="home" className="z-10 relative">
-      <p className="absolute right-10 top-5 text-2xl">{`</body>`}</p>
+      <p className="absolute right-2 lg:right-10 top-5 text-2xl">{`</body>`}</p>
       <section className="flex flex-col gap-4 lg:gap-0 items-center justify-center lg:flex-row-reverse h-screen relative">
         <div className="flex flex-col items-center gap-4 lg:gap-20 lg:mx-20 xl:mx-24">
           <div className="flex flex-col items-center gap-4 lg:flex-row lg:gap-24">
             <ProfilImg size=" xl:w-80 lg:w-52 w-32" />
             <Header />
           </div>
-          <Writer
-            phrases={[
-              "Hi!",
-              "Bienvenue sur mon PortFolio :D",
-              "Work in progress...",
-            ]}
-          />
+          <Writer phrases={["Hi!", "Bienvenue sur mon PortFolio :D"]} />
         </div>
         <Nav />
-        <div className="absolute bottom-5 lg:bottom-20 mx-auto group">
+        <div className="absolute bottom-10 mx-auto group">
           <a
             href={`#projects`}
             className="bg-white lg:h-20 lg:w-20 w-14 h-14 rounded-full flex items-center justify-center group-hover:scale-110 transform transition-all cursor-pointer relative z-20"
@@ -45,10 +39,10 @@ export default function Home() {
       </section>
       <div className="flex w-full lg:gap-14 lg:mt-10 relative">
         <MenuFixed />
-        <div className="w-full mt-4 flex flex-col gap-10">
+        <div className="w-full mt-4 flex flex-col gap-4">
           <Projects />
-          <Skills />
           <Work />
+          <Skills />
         </div>
       </div>
       <Contact />
