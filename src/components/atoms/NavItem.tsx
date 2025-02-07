@@ -11,7 +11,7 @@ export default function NavItem({ id, icon, className }: Props) {
     <a
       href={`#${id}`}
       className={classNames(
-        "rounded-xl p-3 flex bg-drakBlue/65 justify-center boxShadowsLite cursor-pointer transform transition-all hover:scale-110 relative boxShadowRainbowLinkHover z-20",
+        "rounded-xl p-3 flex bg-drakBlue justify-center boxShadowsLite cursor-pointer transform transition-all hover:scale-110 relative boxShadowRainbowLinkHover z-20",
         className
       )}
     >

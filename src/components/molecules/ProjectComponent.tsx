@@ -18,7 +18,12 @@ export default function ProjectComponent({
 }: Props) {
   if (imgSelected) {
     return (
-      <article className="bg-drakBlue/65 bg-opacity-40 relative flex w-full flex-1 flex-col items-center gap-4 overflow-hidden rounded-xl p-5 lg:flex-row lg:gap-6">
+      <article
+        className={classNames(
+          "bg-drakBlue/65 bg-opacity-40 relative flex w-full flex-1 items-center gap-4 overflow-hidden rounded-xl p-5 lg:gap-6",
+          !imgSelected.isMobile ? "flex-col" : "flex-col lg:flex-row",
+        )}
+      >
         <Image
           src={imgSelected.img.src}
           alt={`${imgSelected.title}-Icon`}
@@ -26,14 +31,18 @@ export default function ProjectComponent({
           height={720}
           className={classNames(
             "rounded-lg",
-            imgSelected.isMobile ? "w-fit" : "aspect-video",
+            imgSelected.isMobile ? "w-fit h-full" : "aspect-video",
           )}
         />
-        <div className={classNames(!imgSelected.isMobile && "w-full")}>
-          <h2 className="mb-4 text-2xl lg:text-4xl xl:text-6xl">
+        <div
+          className={classNames(
+            !imgSelected.isMobile ? "w-full overflow-scroll" : "h-full",
+          )}
+        >
+          <h2 className="mb-4 text-xl lg:text-2xl xl:text-4xl">
             {imgSelected.title}
           </h2>
-          <p className="lg:text-2xl xl:text-4xl">{imgSelected.desc}</p>
+          <p className="xl:text-xl">{imgSelected.desc}</p>
         </div>
       </article>
     );
@@ -61,7 +70,7 @@ export default function ProjectComponent({
           <div className="flex h-[60%] flex-col gap-4 overflow-y-scroll pr-4 lg:h-full lg:w-[60%]">
             {project.desc}
           </div>
-          <div className="grid h-[40%] grid-cols-2 overflow-y-scroll pr-3 lg:h-full lg:w-[40%]">
+          <div className="mt-4 flex h-[40%] flex-wrap justify-start overflow-y-scroll pr-3 lg:mt-0 lg:h-full lg:w-[40%]">
             {project.picture.map((picture, key) => (
               <ImgItem
                 key={key}

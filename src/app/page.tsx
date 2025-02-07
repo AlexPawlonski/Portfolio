@@ -14,7 +14,7 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 export default function Home() {
   return (
     <main id="home" className="z-10 relative">
-      <p className="absolute right-10 top-5 text-2xl">{`</body>`}</p>
+      <p className="absolute right-2 lg:right-10 top-5 text-2xl">{`</body>`}</p>
       <section className="flex flex-col gap-4 lg:gap-0 items-center justify-center lg:flex-row-reverse h-screen relative">
         <div className="flex flex-col items-center gap-4 lg:gap-20 lg:mx-20 xl:mx-24">
           <div className="flex flex-col items-center gap-4 lg:flex-row lg:gap-24">

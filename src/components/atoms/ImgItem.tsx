@@ -8,7 +8,7 @@ interface Props {
 }
 export default function ImgItem({ img, onClick }: Props) {
   return (
-    <div className="p-2 cursor-pointer" onClick={() => onClick(img)}>
+    <div className="p-2 cursor-pointer w-1/2" onClick={() => onClick(img)}>
       <Image
         src={img.img.src}
         alt={`${img.title}-Icon`}

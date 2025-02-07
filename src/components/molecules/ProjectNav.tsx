@@ -58,7 +58,7 @@ export default function ProjectNav({
           className="text-xl lg:text-2xl xl:text-4xl opacity-45 hidden lg:block"
         />
       </div>
-      <div className="bg-white text-grey-dark px-3 lg:py-1 lx:py-2 rounded-lg w-[90%] lg:w-full flex items-center gap-2">
+      <div className="bg-white text-grey-dark px-3 lg:py-1 lx:py-2 rounded-lg lg:w-full flex items-center gap-2 flex-1 overflow-hidden">
         <FontAwesomeIcon
           icon={faDisplay}
           className="text-sm lg:text-lg xl:text-xl"
