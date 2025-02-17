@@ -46,7 +46,7 @@ export default function Contact() {
                   icon={faFileDownload}
                   className="w-10 text-xl lg:text-4xl"
                 />
-                <h3 className="text-lg">Mon VC ici</h3>
+                <h3 className="text-lg">Mon CV ici</h3>
               </>
             </LinkCV>
           </div>
