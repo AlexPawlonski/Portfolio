@@ -53,7 +53,7 @@ import {
 export const projects: Project[] = [
   {
     id: 0,
-    name: "QuizArena Cloud",
+    name: "Quiz Arena Cloud",
     desc: (
       <div className="flex flex-col gap-2">
         <h2 className="text-redReact text-xl">
@@ -115,7 +115,7 @@ export const projects: Project[] = [
       </div>
     ),
     icon: quizarenaLogo,
-    title: "QuizArena Cloud",
+    title: "Quiz Arena Cloud",
     picture: [
       {
         title: "Page de connexion",
@@ -437,7 +437,7 @@ export const projects: Project[] = [
       </div>
     ),
     icon: iconNeomanis,
-    title: "NeoServeur",
+    title: "NeoServer",
     picture: [
       {
         title: "Page d'acceuil",
@@ -704,7 +704,7 @@ export const skills: ISkills = {
 export const works: Work[] = [
   {
     title: "Développeur Full-Stack",
-    company: "QuizArena",
+    company: "Quiz Arena",
     type: "CDI",
     img: quizArenaImg,
     linkWork: "https://quizarena.com/en/",

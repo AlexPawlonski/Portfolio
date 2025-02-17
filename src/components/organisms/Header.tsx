@@ -19,7 +19,7 @@ export default function Header({ isFixed }: Props) {
       <div className="flex w-full justify-between">
         <LinkCV className="textAnnimColor boxShadowRainbowLinkHover flex transform items-center gap-2 text-base transition-all hover:scale-105 lg:text-xl">
           <>
-            {`</Mon VC ici `}
+            {`</Mon CV ici `}
             <FontAwesomeIcon
               icon={faArrowUpRightFromSquare}
               className="mb-[2px] text-sm"
@@ -63,7 +63,7 @@ export default function Header({ isFixed }: Props) {
             className="boxShadowRainbowLinkHover flex transform cursor-pointer items-center gap-2 transition-all hover:scale-105"
           >
             <FontAwesomeIcon icon={faLinkedin} />
-            <p>Linkedin</p>
+            <p>LinkedIn</p>
           </a>
 
           <a
