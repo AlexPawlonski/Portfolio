@@ -1,13 +1,6 @@
-@import 'tailwindcss';
-@config "../../tailwind.config.ts";
-
-@theme {
-  --color-blueReact: #69DBFF;
-  --color-redReact: #ff6969;
-  --color-drakBlue: #151823;
-  --color-grey-dark: #242424;
-  --color-grey-light: #363636;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @layer base {
 

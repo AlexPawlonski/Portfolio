@@ -18,6 +18,11 @@ module.exports = {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        blueReact: "#69DBFF",
+        redReact: "#ff6969",
+        drakBlue: "#151823",
+        "grey-dark": "#242424",
+        "grey-light": "#363636",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -60,7 +65,6 @@ module.exports = {
         },
       },
     },
-    plugins: [],
   },
   plugins: [require("tailwindcss-animate")],
 };
