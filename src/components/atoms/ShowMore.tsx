@@ -1,34 +1,40 @@
 "use client";
 
-import { classNames } from "@src/utils";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
 interface Props {
   children: JSX.Element;
   maxHeight?: boolean;
+  isOpen?: boolean;
+  onToggle?: () => void;
 }
 
-export default function ShowMore({ children, maxHeight }: Props) {
-  const [isActive, setIsActive] = useState(false);
+export default function ShowMore({ children, maxHeight, isOpen, onToggle }: Props) {
+  const [localIsActive, setLocalIsActive] = useState(false);
+
+  const isActive = isOpen !== undefined ? isOpen : localIsActive;
+  const handleToggle = onToggle ?? (() => setLocalIsActive((old) => !old));
 
   return (
     <div>
-      <div
-        className={classNames(
-          "overflow-hidden",
-          isActive ? "max-h-full" : "max-h-24"
-        )}
+      <motion.div
+        initial={false}
+        animate={{ height: isActive ? "auto" : 96 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        className="overflow-hidden"
       >
         {children}
-      </div>
-      {maxHeight && !isActive && (
+      </motion.div>
+      {maxHeight && (
         <div
           className="flex items-center w-full gap-6 mt-2 cursor-pointer"
-          onClick={() => setIsActive((old) => !old)}
+          onClick={handleToggle}
         >
           <span className="border-b-4 w-full"></span>
-          <p className="min-w-max">Afficher plus ...</p>
+          <p className="min-w-max">
+            {isActive ? "Afficher moins" : "Afficher plus ..."}
+          </p>
           <span className="border-b-4 w-full"></span>
         </div>
       )}

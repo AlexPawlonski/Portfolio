@@ -17,9 +17,10 @@ export default function ProfilImg({
     <div className={`${size} relative`}>
       <Image
         src={Img.src}
-        alt="AlexPicture"
+        alt="Alex Pawlonski, développeur Full-stack spécialisé Front-end"
         width={200}
         height={200}
+        priority={!isFixed}
         className={classNames("rounded-full relative z-20", isFixed ? "boxShadows" : "boxShadowsLite")}
       />
       {!isFixed && (

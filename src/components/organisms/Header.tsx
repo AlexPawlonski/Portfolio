@@ -13,7 +13,7 @@ export default function Header({ isFixed }: Props) {
     <header
       className={classNames(
         "rainbowGlow boxShadowRainbow bg-drakBlue/65 w-full rounded-xl p-4",
-        isFixed && "max-w-[300px]",
+        isFixed && "max-w-[350px]",
       )}
     >
       <div className="flex w-full justify-between">
@@ -54,7 +54,8 @@ export default function Header({ isFixed }: Props) {
             "text-redReact my-3",
           )}
         >
-          Développeur Front-end passionné
+          Développeur Full-stack 
+          <br/> Spécialisé Front-end
         </h2>
         <div className="rainbowGlow flex gap-6 text-xl xl:text-2xl">
           <a

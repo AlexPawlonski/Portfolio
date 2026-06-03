@@ -1,11 +1,11 @@
-import blogdetail from "./blogdetail.png";
-import bookedite from "./bookedite.png";
-import chat from "./chat.png";
-import homedrag from "./homedrag.png";
-import recapbook from "./recapbook.png";
-import settingrole from "./settingrole.png";
-import statescreen from "./statescreen.png";
-import ticketdetail from "./ticketdetail.png";
+import blogdetail from "./blogdetail.webp";
+import bookedite from "./bookedite.webp";
+import chat from "./chat.webp";
+import homedrag from "./homedrag.webp";
+import recapbook from "./recapbook.webp";
+import settingrole from "./settingrole.webp";
+import statescreen from "./statescreen.webp";
+import ticketdetail from "./ticketdetail.webp";
 import iconNeomanis from "./neomanis.webp";
 
 export {
