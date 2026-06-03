@@ -1,7 +1,7 @@
-import homeCollection from './home.png';
-import loginCollection from './login.png';
-import addCollection from './addCollection.png';
-import addGame from './addGame.png';
-import mycollectionLogo from './MyCollection-logo.png';
+import homeCollection from './home.webp';
+import loginCollection from './login.webp';
+import addCollection from './addCollection.webp';
+import addGame from './addGame.webp';
+import mycollectionLogo from './MyCollection-logo.webp';
 
 export { mycollectionLogo, homeCollection, loginCollection, addCollection, addGame };

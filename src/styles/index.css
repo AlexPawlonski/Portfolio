@@ -16,11 +16,13 @@
 
 
 @layer utilities {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background: #242424;
     color: white;
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: bold;
   }
 
   .boxShadows {

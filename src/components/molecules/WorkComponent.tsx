@@ -6,9 +6,11 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
   work: Work;
+  isOpen?: boolean;
+  onToggle?: () => void;
 }
 
-export default function WorkComponent({ work }: Props) {
+export default function WorkComponent({ work, isOpen, onToggle }: Props) {
   return (
     <div className="bg-drakBlue/65 bg-opacity-40 flex flex-col gap-4 rounded-xl p-5">
       <div className="flex flex-col gap-2">
@@ -16,15 +18,15 @@ export default function WorkComponent({ work }: Props) {
           <div className="flex items-start gap-4">
             <Image
               src={work.img.src}
-              alt="Work-picture"
+              alt={`Logo ${work.company}`}
               width={200}
               height={200}
               className="w-20 rounded-sm lg:w-28"
             />
             <div className="flex flex-col gap-2">
-              <h2 className="text-blueReact textShadowsBlue text-xl lg:text-3xl">
+              <h3 className="text-blueReact textShadowsBlue text-xl lg:text-3xl">
                 {work.title}
-              </h2>
+              </h3>
               <div className="flex items-center gap-4 lg:text-2xl">
                 <a
                   href={work.linkWork}
@@ -42,15 +44,15 @@ export default function WorkComponent({ work }: Props) {
               </div>
             </div>
           </div>
-          <h4 className="mt-1 hidden justify-self-end text-sm xl:block lg:text-2xl">
+          <h4 className="mt-1 hidden whitespace-nowrap justify-self-end text-sm xl:block lg:text-2xl">
             {work.date.start} - {work.date.end}
           </h4>
         </div>
-        <h4 className="justify-self-end text-sm xl:hidden lg:text-xl">
+        <h4 className="whitespace-nowrap justify-self-end text-sm xl:hidden lg:text-xl">
           {work.date.start} - {work.date.end}
         </h4>
       </div>
-      <ShowMore maxHeight={true}>{work.desc}</ShowMore>
+      <ShowMore maxHeight={true} isOpen={isOpen} onToggle={onToggle}>{work.desc}</ShowMore>
       <div className="textAnnimColor flex flex-wrap justify-start gap-x-4 text-sm lg:text-xl">
         {work.skills.map((skill, key) => (
           <h3 key={key} className="min-w-max">{`</${skill}>`}</h3>

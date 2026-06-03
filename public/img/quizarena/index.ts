@@ -1,7 +1,7 @@
-import quizarenaLogo from "./quizarena-logo.png";
-import setailSession from "./detail.png";
-import homeQuiz from "./home.png";
-import loginQuiz from "./login.png";
-import sessionList from "./sessionList.png";
+import quizarenaLogo from "./quizarena-logo.webp";
+import setailSession from "./detail.webp";
+import homeQuiz from "./home.webp";
+import loginQuiz from "./login.webp";
+import sessionList from "./sessionList.webp";
 
 export { quizarenaLogo, setailSession, homeQuiz, loginQuiz, sessionList };

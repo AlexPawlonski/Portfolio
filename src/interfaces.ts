@@ -32,6 +32,7 @@ export interface ISkills {
   server: ISkill[];
   test: ISkill[];
   tools: ISkill[];
+  ia: ISkill[];
 }
 
 export interface Work {

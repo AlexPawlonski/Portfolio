@@ -1,5 +1,6 @@
 import { skills } from "@src/datas";
 import { SkillSection } from "../molecules";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
   faPencil,
@@ -7,12 +8,26 @@ import {
   faScrewdriverWrench,
   faCubes,
   faExplosion,
+  faRobot,
+  faStar,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Skills() {
   return (
-    <section id="skills" className="gap-4 flex flex-col pt-4">
-     <h2 className="text-3xl xl:text-5xl" >Skills</h2>
+    <section id="skills" className="flex flex-col gap-4 pt-4">
+      <div className="flex items-baseline gap-4">
+        <h2 className="text-3xl xl:text-5xl">Skills</h2>
+        <span className="flex items-center gap-2 text-sm rainbowGlow">
+          <span>Mes technos préférées</span>{" "}
+          <FontAwesomeIcon icon={faStar} className="" />
+        </span>
+      </div>
+      <SkillSection
+        title="IA Générative"
+        skillArray={skills.ia}
+        maxHeight={Boolean(skills.ia.length > 3)}
+        icon={faRobot}
+      />
       <SkillSection
         title="Front-end"
         skillArray={skills.front}

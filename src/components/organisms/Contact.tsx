@@ -9,7 +9,7 @@ import LinkCV from "../atoms/LinkCV";
 
 export default function Contact() {
   return (
-    <div
+    <section
       id="contact"
       className="flex h-screen w-full items-center justify-center"
     >
@@ -52,12 +52,10 @@ export default function Contact() {
           </div>
         </div>
         <h3 className="text-sm lg:text-2xl">
-          Si vous voulez{" "}
-          <span className="textAnnimColor"> plus d&apos;informations</span> ou
-          <span className="textAnnimColor"> travailler avec moi </span>
+          Si vous voulez plus d&apos;informations ou travailler avec moi,
           n&apos;hésitez pas à me contacter :D
         </h3>
       </div>
-    </div>
+    </section>
   );
 }
